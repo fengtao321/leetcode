@@ -73,23 +73,18 @@ class Twitter {
         int i = 0;
         int j = 0;
 
-        while(mergedList.size() < 10) {
-            if(i==listA.size() || j==listB.size()) {
-                LinkedList<int[]> listLeft = (i==listA.size())? listB : listA;
-                int missingNum = 10 - mergedList.size();
-                if (listLeft.size() <= missingNum) {
-                    mergedList.addAll(listLeft);
-                } else {
-                    mergedList.addAll(listLeft.subList(0, missingNum));
-                }
-
+        while (mergedList.size() < 10) {
+            if (i == listA.size() || j == listB.size()) {
+                LinkedList<int[]> listLeft = (i == listA.size()) ? listB : listA;
+                int indexStart = (i == listA.size()) ? j : i;
+                int indexEnd =  indexStart + 10 - mergedList.size();
+                indexEnd = listLeft.size() <= indexEnd ? listLeft.size(): indexEnd;
+                mergedList.addAll(listLeft.subList(indexStart, indexEnd));
                 break;
             }
 
-            int[] newsA = listA.peekFirst();
-            int[] newsB = listB.peekFirst();
-
-            LinkedList<int[]> ans;
+            int[] newsA = listA.get(i);
+            int[] newsB = listB.get(j);
             if (newsA[0] > newsB[0]) {
                 mergedList.addLast(newsA);
                 i++;
@@ -98,7 +93,7 @@ class Twitter {
                 j++;
             }
         }
-      
+
         return mergedList;
     }
 
