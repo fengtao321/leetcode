@@ -37,22 +37,21 @@ class NumArray {
     }
 
     private int sumRangeHelp(int left, int right) {
-        if (left > right) {
-            return 0;
-        }
+        if (left == right)
+            return this.tree[left];
 
         int ans = 0;
         if (left % 2 == 1) {
             ans = ans + this.tree[left];
-            left = left + 1;
+            left = (left + 1) >> 1;
         }
 
-        if (right % 2 == 0) {
-            ans = ans + this.tree[right];
-            right = right - 1;
+        if (right % 2 == 1) {
+            ans = ans + this.tree[right - 1];
+            right = (right - 1) >> 1;
         }
 
-        return ans + this.sumRangeHelp(left >> 1, right >> 1);
+        return ans + this.sumRangeHelp(left, right);
 
     }
 }
