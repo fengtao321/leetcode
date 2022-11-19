@@ -1,42 +1,58 @@
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map;
 
 class Solution {
-    HashMap<Integer, ArrayList<Integer>> sourceMap = new HashMap<>();
+    HashMap<Integer, ArrayList<Integer>> sourceMap = new HashMap<>(); // we can't use the HashSet here, when use
+                                                                      // for(Integer course: set) to get course, we can
+                                                                      // not change set
 
     public boolean canFinish(int numCourses, int[][] prerequisites) {
         for (int i = 0; i < prerequisites.length; i++) {
-            int[] prerequisite = prerequisites[i];
-            if (!updateSourceMap(prerequisite[0], prerequisite[1])) {
+            int course = prerequisites[i][0];
+            int preCourse = prerequisites[i][1];
+            ArrayList<Integer> list = sourceMap.getOrDefault(course, new ArrayList<>());
+            list.add(preCourse);
+            sourceMap.put(course, list);
+        }
+
+        // sourceMap.forEach((k, v) -> {
+        // System.out.println("");
+        // System.out.print("key: " + k + " value: ");
+        // printList(v);
+        // System.out.println("");
+        // });
+
+        for (Integer course : sourceMap.keySet()) {
+            if (!checkSourceMap(numCourses, sourceMap.get(course))) {
                 return false;
             }
+
         }
 
         return true;
     }
 
-    private boolean updateSourceMap(int key, int value) {
-        if (key == value)
+    private void printList(ArrayList<Integer> object) {
+        object.forEach(value -> System.out.print(value + "->"));
+    }
+
+    private boolean checkSourceMap(int numCourses, ArrayList<Integer> prerequisiteList) {
+        // null if this map contains no mapping for the key.
+        if (prerequisiteList == null || prerequisiteList.size() == 0)
+            return true;
+
+        if (numCourses == 0)
             return false;
 
-        ArrayList<Integer> valList = sourceMap.get(value);
-
-        if (valList != null && valList.indexOf(key) > -1) {
-            return false;
+        int i = 0;
+        while (i < prerequisiteList.size()) {
+            int preCourse = prerequisiteList.get(i);
+            if (!checkSourceMap(numCourses - 1, sourceMap.get(preCourse)))
+                return false;
+            prerequisiteList.remove(i);
         }
 
-        ArrayList<Integer> keyList = sourceMap.getOrDefault(key, new ArrayList<Integer>());
-
-        if (valList != null) {
-            keyList.addAll(valList);
-        }
-
-        if (valList == null && keyList.indexOf(value) < 0) {
-            keyList.add(value);
-        }
-
-        sourceMap.put(key, keyList);
         return true;
-
     }
 }
