@@ -1,8 +1,3 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.stream.Stream;
-
 class NewThread extends Thread {
    Thread thread;
 
@@ -40,35 +35,5 @@ public class ThreadDemo {
          System.out.println("Main thread interrupted.");
       }
       System.out.println("Main thread exiting.");
-   }
-}
-
-class HelloWorld {
-   static int sumTest = 0;
-
-   public static void main(String[] args) {
-
-      int[] widgets = { 1, 2, 3, 4, 5, 6 };
-
-      // ArrayList<Integer> widgets = new ArrayList<>();
-
-      // int sum = Arrays.stream(widgets)
-      // .filter(w -> w > 3)
-      // .forEach(System.out::println);
-      // System.out.println(sumTest);
-
-      Stream<Integer> stream = Stream.of(1, 2, 3, 4, 5, 6);
-
-      // Using forEach(Consumer action) to print
-      // Character at index 1 in reverse order
-      stream
-            .filter(w -> w > 3)
-            .forEach(HelloWorld::add);
-
-      System.out.println(HelloWorld.sumTest);
-   }
-
-   private static void add(int x) {
-      sumTest = sumTest + x;
    }
 }
