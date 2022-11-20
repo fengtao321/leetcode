@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Map;
 
 class Solution {
     HashMap<Integer, ArrayList<Integer>> sourceMap = new HashMap<>(); // we can't use the HashSet here, when use
@@ -16,28 +15,15 @@ class Solution {
             sourceMap.put(course, list);
         }
 
-        // sourceMap.forEach((k, v) -> {
-        // System.out.println("");
-        // System.out.print("key: " + k + " value: ");
-        // printList(v);
-        // System.out.println("");
-        // });
-
         for (Integer course : sourceMap.keySet()) {
-            if (!checkSourceMap(numCourses, sourceMap.get(course))) {
+            if (!dfs(numCourses, sourceMap.get(course))) {
                 return false;
             }
-
         }
-
         return true;
     }
 
-    private void printList(ArrayList<Integer> object) {
-        object.forEach(value -> System.out.print(value + "->"));
-    }
-
-    private boolean checkSourceMap(int numCourses, ArrayList<Integer> prerequisiteList) {
+    private boolean dfs(int numCourses, ArrayList<Integer> prerequisiteList) {
         // null if this map contains no mapping for the key.
         if (prerequisiteList == null || prerequisiteList.size() == 0)
             return true;
@@ -45,12 +31,13 @@ class Solution {
         if (numCourses == 0)
             return false;
 
-        int i = 0;
-        while (i < prerequisiteList.size()) {
+        int i = prerequisiteList.size() - 1; // remove last element, O(1), otherwise O(n)
+        while (prerequisiteList.size() > 0) {
             int preCourse = prerequisiteList.get(i);
-            if (!checkSourceMap(numCourses - 1, sourceMap.get(preCourse)))
+            if (!dfs(numCourses - 1, sourceMap.get(preCourse)))
                 return false;
             prerequisiteList.remove(i);
+            i--;
         }
 
         return true;
