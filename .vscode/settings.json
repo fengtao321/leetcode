@@ -1,4 +1,15 @@
 {
     "editor.formatOnSave": true,
-    "java.format.settings.url": "eclipse-formatter.xml"
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": true
+      },
+    "java.format.settings.url": "eclipse-formatter.xml",
+    "java.saveActions.organizeImports": true,
+    "java.import.exclusions": [
+
+        "**/node_modules/**",
+        "**/.metadata/**",
+        "**/archetype-resources/**",
+        "**/META-INF/maven/**"
+    ]
 }
