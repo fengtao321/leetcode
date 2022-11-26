@@ -5,15 +5,15 @@ class Solution {
 
     public int maximumScore(int[] nums, int k) {
         int maxI = nums.length;
-
-        sparseTable = new int[maxI][maxI];
+        int maxJ = (int) (Math.log(maxI) / Math.log(2)) + 1;
+        sparseTable = new int[maxI][maxJ];
 
         // build sparse table
         for (int i = 0; i < maxI; i++) {
             sparseTable[i][0] = nums[i];
         }
 
-        for (int j = 1; (1 << j) < maxI; j++) {
+        for (int j = 1; j < maxJ; j++) {
             for (int i = 0; (i + (1 << j) - 1) < maxI; i++) {
                 sparseTable[i][j] = Math.min(sparseTable[i][j - 1], sparseTable[i + (1 << (j - 1))][j - 1]);
             }
@@ -48,7 +48,6 @@ class Solution {
     private int query(int left, int right) {
         int length = right - left + 1;
         int j = (int) (Math.log(length) / Math.log(2));
-        // int j = Integer.numberOfTrailingZeros(Integer.highestOneBit(length));
         int i1 = left;
         int i2 = right - (1 << j) + 1; // faster than int i2 = right - (int) Math.pow(2, j);
         int ans = Math.min(sparseTable[i1][j], sparseTable[i2][j]) * length;
