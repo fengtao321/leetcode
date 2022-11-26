@@ -16,6 +16,7 @@ class TreeAncestor {
             getHeight(i);
         }
 
+        // 其本质是DP算法，即对树上每个节点都保存一个数组，其存储距某个节点距离为2^i次方的节点
         for (int j = 1; j < 16; j++) { // start from first column
             for (int i = 0; i < n; i++) {
                 if (tree[i][j - 1] > -1) {
@@ -37,9 +38,14 @@ class TreeAncestor {
         if (k == height)
             return 0; // root of the tree is node 0
 
+        // 比如说，k=3，这时候3=011，需要跳一步10和一步01，先找到10，之后找node的2级祖先节点，再从2级祖先节点，跳1级祖先节点
         for (int i = 15; (i >= 0) && (node > -1) && (k > 0); i--) {
             if (((1 << i) & k) > 0) { // get the largest mode
                 node = tree[node][i];
+            }
+
+            if (node == -1) {
+                break;
             }
         }
 
