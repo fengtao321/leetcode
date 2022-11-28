@@ -20,7 +20,7 @@ class Solution {
         int left = 0;
         int right = 0;
 
-        PriorityQueue<Node> pq = new PriorityQueue<>((a, b) -> a.length - b.length);
+        PriorityQueue<Node> pq = new PriorityQueue<>((a, b) -> b.length - a.length);
 
         while (left < arr.length && right < arr.length) {
 
