@@ -8,18 +8,20 @@ class Solution {
         for (String token : tokens) {
             switch (token) {
                 case "+":
-                    stack.add(stack.poll() + stack.poll());
+                    stack.add(stack.pollLast() + stack.pollLast());
                     break;
                 case "-":
-                    num = stack.poll();
-                    stack.add(stack.poll() - num);
+                    num = stack.pollLast();
+                    stack.add(stack.pollLast() - num);
                     break;
                 case "*":
-                    stack.add(stack.poll() * stack.poll());
+                    stack.add(stack.pollLast() * stack.pollLast());
                     break;
                 case "/":
-                    num = stack.poll();
-                    stack.add(stack.poll() / num);
+                    num = stack.pollLast();
+                    long val = stack.pollLast() / num;
+                    num = val > 0 ? (int) Math.floor(val) : (int) Math.ceil(val);
+                    stack.add(num);
                     break;
                 default:
                     stack.add(Integer.parseInt(token));
