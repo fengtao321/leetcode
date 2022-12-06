@@ -1,58 +1,68 @@
-import java.util.Map.Entry;
-import java.util.PriorityQueue;
-import java.util.Queue;
 import java.util.TreeMap;
 
 class MyCalendarTwo {
-    TreeMap<Integer, Queue<Integer>> record;
+
+    TreeMap<Integer, Integer> treemap;
 
     public MyCalendarTwo() {
-        record = new TreeMap<>();
+        treemap = new TreeMap<>();
     }
 
+    // Prefix sum. For each start, +1; for each end, -1;
     public boolean book(int start, int end) {
-        Entry<Integer, Queue<Integer>> preBook = record.lowerEntry(end);
-        TreeMap<Integer, Integer> bookedIntervals = new TreeMap<>();
-        while (preBook != null) {
-            int left = Math.min(preBook.getKey(), start);
-            for (int preBookEnd : preBook.getValue()) {
-                if (preBookEnd <= start)
-                    break;
-
-                bookedIntervals.put(left, bookedIntervals.getOrDefault(left, 0) + 1);
-                int right = Math.min(preBookEnd, end);
-                bookedIntervals.put(right, bookedIntervals.getOrDefault(right, 0) - 1);
-            }
-
-            preBook = record.lowerEntry(preBook.getKey());
+        // Counter for only the start point
+        var counter = 0;
+        var startFloorEntry = treemap.floorEntry(start);
+        // Use the value of the closest point to the left of the start point
+        // or itself
+        if (startFloorEntry != null) {
+            counter = startFloorEntry.getValue();
+        } else {
+            // If there is no point to the left, start from zero.
+            counter = 0;
         }
 
-        printHashMap(bookedIntervals);
-        int counter = 0;
-        for (Integer value : bookedIntervals.values()) {
-            counter = counter + value;
-            if (value > 0 && counter > 1)
+        // the new booking request will cover the start point.
+        // If there are already two booking requests over the start point,
+        // we can't book more.
+        if (counter == 2) {
+            return false;
+        }
+
+        // Left exclusive because we already discussed the start point.
+        var subMap = treemap.subMap(start, false, end, false);
+        // Same here. If any point is already booked twice, we can't book more.
+        for (Integer v : subMap.values()) {
+            if (v == 2) {
                 return false;
+            }
         }
 
-        Queue<Integer> queue = record.getOrDefault(start, new PriorityQueue<Integer>((a, b) -> b - a));
-        queue.add(end);
-        record.put(start, queue);
+        // Increment the counter for start point
+        treemap.put(start, counter + 1);
+        // Increment the counter for everything between start and end
+        // (both exclusive)
+        for (var entry : subMap.entrySet()) {
+            treemap.put(entry.getKey(), entry.getValue() + 1);
+        }
+
+        // Now we only need to discuss the end point.
+        // If the end point already exists, we do not modify it, because its
+        // counter was incremented from the left side and decremented on itself
+        var endFloorEntry = treemap.floorEntry(end);
+        // Otherwise, we decrement from the closest point to the left.
+        if (endFloorEntry.getKey() != end) {
+            treemap.put(end, endFloorEntry.getValue() - 1);
+        }
+
         return true;
     }
 
     private void printHashMap(TreeMap<Integer, Integer> sourceMap) {
         sourceMap.forEach((k, v) -> {
-            System.out.println("");
-            System.out.print("key: " + k + " value: " + v);
-            System.out.println("");
+            System.out.print("key: " + k + " value: " + v + " ->");
         });
+        System.out.println("");
+        System.out.println("=============");
     }
-
 }
-
-/**
- * Your MyCalendarTwo object will be instantiated and called as such:
- * MyCalendarTwo obj = new MyCalendarTwo();
- * boolean param_1 = obj.book(start,end);
- */
