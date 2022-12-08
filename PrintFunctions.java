@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.TreeMap;
 
 class PrintHashMap {
     private void printHashMap(HashMap<Integer, ArrayList<Integer>> sourceMap) {
@@ -8,6 +9,14 @@ class PrintHashMap {
             System.out.println("");
             System.out.print("key: " + k + " value: ");
             printArrayList(v);
+            System.out.println("");
+        });
+    }
+
+    private void printTreeMap(TreeMap<Integer, Integer> sourceMap) {
+        System.out.println("==============");
+        sourceMap.forEach((k, v) -> {
+            System.out.print("key: " + k + " value: " + v);
             System.out.println("");
         });
     }
