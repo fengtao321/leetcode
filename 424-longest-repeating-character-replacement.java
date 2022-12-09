@@ -11,7 +11,8 @@ class Solution {
             map.put(c, map.getOrDefault(c, 0) + 1);
             max = Math.max(max, map.get(c));
 
-            if (right + 1 - left - max > k) { // I don't understand here, why not update max??
+            if (right + 1 - left - max > k) { // left plus one, so right + 1 - left, cant be greater than ans, not
+                                              // necessary to update max, won't change ans
                 char key = s.charAt(left);
                 map.put(key, map.get(key) - 1);
                 left++;
