@@ -1,44 +1,46 @@
-import java.util.LinkedList;
+import java.util.ArrayDeque;
+import java.util.Deque;
 
 class Solution {
     public int largestRectangleArea(int[] heights) {
         int max = 0;
-        LinkedList<int[]> dq = new LinkedList<>(); // height, indexFrom
+        Deque<Pair> monoQueue = new ArrayDeque<>(); // height, indexFrom
 
         for (int i = 0; i < heights.length; i++) {
-            int height = heights[i];
-
-            int[] top = dq.peekLast();
-            if (top == null || top[0] < height) {
-                dq.add(new int[] { height, i });
+            Pair pair = monoQueue.peekLast();
+            if (pair == null || pair.height < heights[i]) {
+                monoQueue.add(new Pair(heights[i], i));
                 continue;
             }
 
-            if (top[0] == height)
+            if (pair.height == heights[i]) {
                 continue;
-
-            int length = dq.size();
-            int lastIndex = 0;
-            for (int j = length - 1; j >= 0 && dq.peekLast()[0] > height; j--) {
-                int[] list = dq.pollLast();
-                lastIndex = list[1];
-                max = Math.max(max, list[0] * (i - lastIndex));
             }
 
-            dq.add(new int[] { height, lastIndex });
+            int lastIndex = 0; // when update the pair, the index is at the beginning, that can use this height
+            while (!monoQueue.isEmpty() && monoQueue.peekLast().height > heights[i]) {
+                Pair lPair = monoQueue.pollLast();
+                max = Math.max(max, lPair.height * (i - lPair.index));
+                lastIndex = lPair.index;
+            }
+            monoQueue.add(new Pair(heights[i], lastIndex));
         }
 
-        while (!dq.isEmpty()) {
-            int[] list = dq.pollLast();
-            max = Math.max(max, list[0] * (heights.length - list[1]));
+        while (!monoQueue.isEmpty()) {
+            Pair pair = monoQueue.pollLast();
+            max = Math.max(max, pair.height * (heights.length - pair.index));
         }
 
         return max;
     }
+}
 
-    private void printLinkedList(LinkedList<int[]> dq) {
-        System.out.println("=============");
-        dq.forEach(list -> System.out.println(list[0] + "->" + list[1]));
+class Pair {
+    int height;
+    int index;
 
+    Pair(int height, int index) {
+        this.height = height;
+        this.index = index;
     }
 }
