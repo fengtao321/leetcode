@@ -6,24 +6,22 @@ class Solution {
 
         int speedL = 1;
         int speedR = piles[piles.length - 1];
-        int ans = speedR;
 
-        while (speedL <= speedR) {
-            int mid = (int) Math.floor((speedL + speedR) / 2.0);
-            long time = 0; // 1 <= piles[i] <= 10^9 out of memory
+        while (speedL < speedR) { // no equal to avoid loop
+            int mid = (speedL + speedR) / 2;
+            double time = 0;
 
             for (int pile : piles) {
-                time = time + (int) Math.ceil((double) pile / mid);
+                time = time + Math.ceil((double) pile / mid);
             }
 
             if (time > h) {
                 speedL = mid + 1;
             } else {
-                speedR = mid - 1;
-                ans = Math.min(ans, mid);
+                speedR = mid; // right limit will keep the ans
             }
         }
 
-        return ans;
+        return speedR;
     }
 }
