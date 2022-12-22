@@ -5,70 +5,28 @@ class Solution {
     public int regionsBySlashes(String[] grid) {
         int[][] matrix = convertToMatrix(grid);
 
-        int ans = 1;
-        int counter = 1;
-
+        int ans = 0;
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix.length; j++) {
                 if (matrix[i][j] != 0)
                     continue;
-                int left = 0;
-                int top = 0;
-                if (j > 0 && matrix[i][j - 1] > 0) {
-                    left = matrix[i][j - 1];
-                    // matrix[i][j] = matrix[i][j - 1];
-                }
-
-                if (i > 0 && matrix[i - 1][j] > 0) {
-                    top = matrix[i - 1][j];
-                    // matrix[i][j] = matrix[i - 1][j];
-                    // continue;
-                }
-                if (left == top) {
-                    matrix[i][j] = left;
-                    if (matrix[i][j] == 0) {
-                        matrix[i][j] = counter++;
-                        ans++;
-                    }
-
-                    continue;
-                }
-
-                if (left == 0) {
-                    matrix[i][j] = top;
-                    continue;
-                }
-
-                if (top == 0) {
-                    matrix[i][j] = left;
-                    continue;
-                }
-
-                ans--;
-                // print2D(matrix);
-
-                if (left < top) {
-                    matrix[i][j] = left;
-                    adjustMatrix(matrix, i - 1, j, left);
-                } else {
-                    matrix[i][j] = top;
-                    adjustMatrix(matrix, i, j - 1, top);
-                }
+                ans++;
+                markMatrix(matrix, i, j, ans);
 
             }
         }
-        print2D(matrix);
         return ans;
     }
 
-    private void adjustMatrix(int[][] matrix, int i, int j, int target) {
-        if (i < 0 || j < 0 || j == matrix.length || matrix[i][j] <= target)
+    private void markMatrix(int[][] matrix, int i, int j, int target) {
+        if (i < 0 || j < 0 || i == matrix.length || j == matrix.length || matrix[i][j] != 0)
             return;
 
         matrix[i][j] = target;
-        adjustMatrix(matrix, i - 1, j, target);
-        adjustMatrix(matrix, i, j - 1, target);
-        adjustMatrix(matrix, i, j + 1, target);
+        markMatrix(matrix, i - 1, j, target);
+        markMatrix(matrix, i + 1, j, target);
+        markMatrix(matrix, i, j - 1, target);
+        markMatrix(matrix, i, j + 1, target);
     }
 
     private int[][] convertToMatrix(String[] grid) {
