@@ -26,6 +26,10 @@ class Solution {
             }
         }
 
+        // 如果是偶数，可以循环，10101010，所以不用再从后加一遍
+        if ((sArray.length & 1) == 0)
+            return Math.min(start0.size(), start1.size());
+
         return Math.min(brutalForce(start0), brutalForce(start1));
 
     }
