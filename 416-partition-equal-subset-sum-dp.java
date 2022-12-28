@@ -17,18 +17,27 @@ class Solution {
         if ((sum & 1) > 0)
             return false;
 
+        int target = sum / 2;
         HashSet<Integer> dp = new HashSet<>();
         dp.add(0);
 
         for (int i = nums.length - 1; i >= 0; i--) {
+            if (nums[i] > target)
+                return false;
+
             HashSet<Integer> nextDp = new HashSet<>();
             for (int value : dp) {
                 nextDp.add(value);
-                nextDp.add(value + nums[i]);
+
+                int subSum = value + nums[i];
+                if (subSum == target)
+                    return true;
+                if (subSum < target)
+                    nextDp.add(subSum);
             }
             dp = nextDp;
         }
-        return dp.contains(sum / 2);
+        return false;
     }
 
 }
