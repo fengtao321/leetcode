@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.PriorityQueue;
 import java.util.TreeMap;
 
 class PrintHashMap {
@@ -22,6 +23,10 @@ class PrintHashMap {
     }
 
     private void printArrayList(ArrayList<Integer> object) {
+        object.forEach(value -> System.out.print(value + "->"));
+    }
+
+    private void printPriorityQueue(PriorityQueue<Integer> object) {
         object.forEach(value -> System.out.print(value + "->"));
     }
 
