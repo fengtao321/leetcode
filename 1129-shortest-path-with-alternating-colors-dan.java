@@ -1,11 +1,10 @@
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.LinkedList;
 import java.util.Map;
-import java.util.PriorityQueue;
 import java.util.Queue;
 
-//use set to keep visited node
 class Solution {
 
     HashMap<Integer, HashSet<Integer>>[] graph;
@@ -21,37 +20,44 @@ class Solution {
         populateGraph(redEdges, 0);
         populateGraph(blueEdges, 1);
 
-        // node, cost, color
-        Queue<int[]> pq = new PriorityQueue<>((a, b) -> a[1] - b[1]);
+        // node, color
+        Queue<int[]> queue = new LinkedList<>();
         boolean[][] visited = new boolean[n][2];
 
         for (Map.Entry<Integer, HashSet<Integer>> entry : graph[0].entrySet()) {
             int node = entry.getKey();
             for (int color : entry.getValue()) {
-                pq.offer(new int[] { node, 1, color });
+                queue.offer(new int[] { node, color });
             }
         }
 
-        while (!pq.isEmpty()) {
-            int[] tuple = pq.poll();
-            int node = tuple[0];
-            int cost = tuple[1];
-            int color = tuple[2];
+        int level = 0;
+        while (!queue.isEmpty()) {
 
-            if (ans[node] == -1 || cost < ans[node])
-                ans[node] = cost;
+            level++;
 
-            if (visited[node][color])
-                continue;
-            visited[node][color] = true;
+            int size = queue.size();
+            for (int i = 0; i < size; i++) {
+                int[] tuple = queue.poll();
+                int node = tuple[0];
+                int color = tuple[1];
 
-            for (Map.Entry<Integer, HashSet<Integer>> entry : graph[node].entrySet()) {
-                int nextNode = entry.getKey();
-                for (int nextColor : entry.getValue()) {
-                    if (!visited[nextNode][nextColor] && color != nextColor)
-                        pq.offer(new int[] { nextNode, cost + 1, nextColor });
+                if (ans[node] == -1)
+                    ans[node] = level;
+
+                if (visited[node][color])
+                    continue;
+                visited[node][color] = true;
+
+                for (Map.Entry<Integer, HashSet<Integer>> entry : graph[node].entrySet()) {
+                    int nextNode = entry.getKey();
+                    for (int nextColor : entry.getValue()) {
+                        if (!visited[nextNode][nextColor] && color != nextColor)
+                            queue.offer(new int[] { nextNode, nextColor });
+                    }
                 }
             }
+
         }
 
         return ans;
