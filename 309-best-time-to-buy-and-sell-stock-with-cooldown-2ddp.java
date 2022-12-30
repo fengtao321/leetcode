@@ -3,8 +3,8 @@ import java.util.Arrays;
 class Solution {
     int[] prices;
     int[][] dp;
-    int isBuy = 0;
-    int isNotBuy = 1;
+    int canBuy = 0;
+    int canSale = 1;
 
     public int maxProfit(int[] prices) {
         this.prices = prices;
@@ -13,7 +13,7 @@ class Solution {
             Arrays.fill(a, -1);
         }
 
-        return dfs(0, isBuy);
+        return dfs(0, canBuy);
     }
 
     private int dfs(int i, int state) {
@@ -23,10 +23,10 @@ class Solution {
             return dp[i][state];
 
         int coolDown = dfs(i + 1, state);
-        if (state == isBuy) {
-            dp[i][state] = Math.max(dfs(i + 1, isNotBuy) - prices[i], coolDown);
+        if (state == canBuy) {
+            dp[i][state] = Math.max(dfs(i + 1, canSale) - prices[i], coolDown);
         } else {
-            dp[i][state] = Math.max(dfs(i + 2, isBuy) + prices[i], coolDown);
+            dp[i][state] = Math.max(dfs(i + 2, canBuy) + prices[i], coolDown);
         }
 
         return dp[i][state];
