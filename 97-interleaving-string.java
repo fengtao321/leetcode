@@ -12,6 +12,8 @@ class Solution {
         s2Arr = s2.toCharArray();
         s3Arr = s3.toCharArray();
 
+        // for dp, matrix can be overwritten by the later dfs process. so can not set up
+        // the matrix as dp = new int[s3Arr.length][2];
         dp = new int[s1Arr.length][s2Arr.length]; // s1 index or s2 index
         return dfs(0, 0, 0);
     }
