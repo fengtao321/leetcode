@@ -1,6 +1,7 @@
 class Solution:
     def alienOrder(self, words: List[str]) -> str:
         alienMap = {c: set() for word in words for c in word}
+        # alienMap = defaultdict(set)
         prerequisite =  {c: 0 for word in words for c in word}
         last = ""
         for word in words:
