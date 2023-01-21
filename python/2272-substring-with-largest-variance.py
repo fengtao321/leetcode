@@ -1,41 +1,42 @@
-class Solution:
-    def largestVariance(self, s: str) -> int:
-        ans = 0
-        hashset = set(s)
-        for x in range(ord('a'), ord('z')+1):
-            xchar = chr(x)
-            if xchar not in hashset:
-                continue
+class Solution {
+    public int largestVariance(String s) {
+        Set<Character> uniques = new HashSet<>();
+        int[] freq = new int[26];
+        
+        for (char c : s.toCharArray()) {
+            uniques.add(c);
+            freq[c-'a']++;
+        }
+        int max = 0;
+        for (char a : uniques) {
+            for (char b : uniques) {
                 
-            for y in range(ord('a'), ord('z')+1): 
-                ychar = chr(y)
-                if x==y or ychar not in hashset:
-                    continue
+                int countA = 0, countB = 0, freqA = freq[a-'a'], freqB = freq[b-'a'];
+                if (a == b || freqA == 0 || freqB == 0) continue;
+                
+                for (char c : s.toCharArray()) {
+                   
+                    if (a == c) 
+                        countA++;
+                    else if (b == c) {
+                        countB--;
+                        freqB--;
+                    }
                     
-                r_res = l_res = l_min = l = 0
-                hasMin = False
-                for r in range(len(s)):
-                    if s[r] == xchar:
-                        r_res +=1
-                     
-                    if s[r] == ychar:
-                        r_res -=1
-                        hasMin = True
-                        
-                        
-                        while l < r:
-                            if s[l] == xchar:
-                                l_res +=1
-                            if s[l] == ychar:
-                                l_res -=1
-                            l+=1
-                            l_min = min(l_res, l_min)
+                    if (countA + countB < 0 && freqB > 0) {
+                        //current total is negative and it would be optimal to start at a A
+                        //but we cannot do if no B left.
+                        countA = 0;
+                        countB = 0;
+                    }
+                    
+                    if (countA != 0 && countB != 0)
+                        max = Math.max(max, countA + countB);
+                    
+                }
+            }
+        }
+        return max;
 
-                           
-                    if r_res > 0 and hasMin:
-                        ans = max(ans, (r_res - l_min))
-               
-        return ans
-                    
-                
-                
+    }
+}
