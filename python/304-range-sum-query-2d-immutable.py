@@ -4,16 +4,16 @@ class NumMatrix:
         m = len(matrix)
         n = len(matrix[0])
         
-        self.prefix = [[0]*(n+1) for _ in range(m)]
-        for i in range(m):
+        self.prefix = [[0]*(n+1) for _ in range(m+1)]
+        for i in range(1,m+1):
             for j in range(1, n+1):
-               self.prefix[i][j] = self.prefix[i][j-1] + matrix[i][j-1]
+                self.prefix[i][j] = self.prefix[i-1][j] - self.prefix[i-1][j-1]  + self.prefix[i][j-1] + matrix[i-1][j-1]
+        print(self.prefix )
 
     def sumRegion(self, row1: int, col1: int, row2: int, col2: int) -> int:
-        ans = 0
-        for i in range(row1, row2+1):
-            ans = ans + self.prefix[i][col2+1] - self.prefix[i][col1]
-        return ans
+        return self.prefix[row2+1][col2+1] - self.prefix[row2+1][col1] - self.prefix[row1][col2+1] + self.prefix[row1][col1]
+
+
 
 
 
