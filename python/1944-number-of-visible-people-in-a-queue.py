@@ -4,9 +4,9 @@ class Solution:
         ans, stack = [0] * N, [heights[N-1]]
         for i in range(N-2, -1, -1):
             counter = 0
-            while stack and stack[0] < heights[i]:
+            while stack and stack[-1] < heights[i]:
                 counter += 1
-                stack.pop(0)
+                stack.pop()
             ans[i] = counter + 1 if stack else counter
-            stack.insert(0, heights[i])
+            stack.append(heights[i])
         return ans
