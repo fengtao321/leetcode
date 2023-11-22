@@ -4,7 +4,7 @@ def dfs(x, y):
     
     d, m = divmod(x, y)
     if m==0: return -1
-    cur = dfs(m,y)
+    cur = dfs(y,m)
     return cur if cur<0 else d+cur
     
 def solution(x,y):
