@@ -45,7 +45,7 @@ class Solution:
                             if nxt in visited[depth-1] or nxt in visited[depth]: continue 
                             q.append(nxt)
                 pre.update(visited[depth-1])
-            return depth
+            return -1
         
         def dfs(l, depth):
             word = l[-1]
@@ -70,9 +70,9 @@ class Solution:
         hash_map = init()
         visited = {}
         depth = bfs()
-        # print(depth, visited)
         ans = []
-        dfs([endWord], depth-1)
+        if depth>0: 
+            dfs([endWord], depth-1)
         return ans
 
     
