@@ -49,9 +49,9 @@ This is the repository for Zihao and Alice to improve their coding skills. So fa
 
 > Problem: 1001-1500
 
-|#No|Problem|Level|Tags|Alice|Zihao|
-|:-:|:-----:|:---:|:--:|:---:|:---:|
-|1371|[Find the Longest Substring Containing Vowels in Even Counts](https://leetcode.com/problems/find-the-longest-substring-containing-vowels-in-even-counts/description/)|Medium|Hash Table<br>String<br>Bit Manipulation<br>Prefix Sum|[Python](python\1371-find-the-longest-substring-containing-vowels-in-even-counts.py)|[C++](c++\1371-find-the-longest-substring-containing-vowels-in-even-counts.cpp)|
+|#No|Problem|Level|Tags|Alice|Zihao|Date|
+|:-:|:-----:|:---:|:--:|:---:|:---:|:--:|
+|1371|[Find the Longest Substring Containing Vowels in Even Counts](https://leetcode.com/problems/find-the-longest-substring-containing-vowels-in-even-counts/description/)|Medium|Hash Table<br>String<br>Bit Manipulation<br>Prefix Sum|[Python](python\1371-find-the-longest-substring-containing-vowels-in-even-counts.py)|[C++](c++\1371-find-the-longest-substring-containing-vowels-in-even-counts.cpp)|2024.09.15|
 |||||||
 
 ### Problem List 4
