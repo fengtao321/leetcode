@@ -51,7 +51,7 @@ This is the repository for Zihao and Alice to improve their coding skills. So fa
 
 |#No|Problem|Level|Tags|Alice|Zihao|
 |:-:|:-----:|:---:|:--:|:---:|:---:|
-|4|[Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/description/)|Hard|Array<br>Binary Search<br>Divide and Conquer|[Java](java\4-median-of-two-sorted-arrays.java)||
+|1371|[Find the Longest Substring Containing Vowels in Even Counts](https://leetcode.com/problems/find-the-longest-substring-containing-vowels-in-even-counts/description/)|Medium|Hash Table<br>String<br>Bit Manipulation<br>Prefix Sum|[Python](python\1371-find-the-longest-substring-containing-vowels-in-even-counts.py)|[C++](c++\1371-find-the-longest-substring-containing-vowels-in-even-counts.cpp)|
 |||||||
 
 ### Problem List 4
