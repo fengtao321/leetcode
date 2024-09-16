@@ -15,11 +15,11 @@
 ```
 # Overview
 
-This is the repository for Zihao and Alice to improve their coding skills. So far, Alice is taking the lead but who knows what gonna happen in the future?
+This is the repository for Tao and Zihao to improve their coding skills. So far, Tao is taking the lead but who knows what gonna happen in the future?
 
 A quick update:
 In future, Zihao has a smart idea for question 1674 :) Tao put his idea into python, like a coding machine, when Zihao went to office.
-In fact, his idea is just a prototype and he has not tried it himself. Alice is exactly the pioneer, and also, she is always sincerely encouraging Zihao to go further.
+In fact, his idea is just a prototype and he has not tried it himself. Tao is exactly the pioneer rather than the coding machine. Actually, she is always sincerely encouraging Zihao to go further.
 
 ## Category
 + [Problem: 1-500](#problem-list-1)
@@ -45,7 +45,7 @@ In fact, his idea is just a prototype and he has not tried it himself. Alice is 
 
 |#No|Problem|Level|Tags|Alice|Zihao|Date|
 |:-:|:-----:|:---:|:--:|:---:|:---:|:--:|
-|539|[Minimum Time Difference](https://leetcode.com/problems/minimum-time-difference/description/)|Medium||[Python](python\539-minimum-time-difference.py)|[C++](c++\539-minimum-time-difference.cpp)|2024.09.16|
+|539|[Minimum Time Difference](https://leetcode.com/problems/minimum-time-difference/description/)|Medium||[Python](python\539-minimum-time-difference.py)|[C++(TBI)](c++\539-minimum-time-difference.cpp)|2024.09.16|
 |||||||
 
 ### Problem List 3
@@ -54,7 +54,7 @@ In fact, his idea is just a prototype and he has not tried it himself. Alice is 
 
 |#No|Problem|Level|Tags|Alice|Zihao|Date|
 |:-:|:-----:|:---:|:--:|:---:|:---:|:--:|
-|1371|[Find the Longest Substring Containing Vowels in Even Counts](https://leetcode.com/problems/find-the-longest-substring-containing-vowels-in-even-counts/description/)|Medium|Hash Table<br>String<br>Bit Manipulation<br>Prefix Sum|[Python](python\1371-find-the-longest-substring-containing-vowels-in-even-counts.py)|[C++(TBI)](c++\1371-find-the-longest-substring-containing-vowels-in-even-counts.cpp)|2024.09.15|
+|1371|[Find the Longest Substring Containing Vowels in Even Counts](https://leetcode.com/problems/find-the-longest-substring-containing-vowels-in-even-counts/description/)|Medium|Hash Table<br>String<br>Bit Manipulation<br>Prefix Sum|[Python](python\1371-find-the-longest-substring-containing-vowels-in-even-counts.py)|[C++](c++\1371-find-the-longest-substring-containing-vowels-in-even-counts.cpp)|2024.09.15|
 |||||||
 
 ### Problem List 4
