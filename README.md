@@ -39,10 +39,9 @@ This is the repository for Zihao and Alice to improve their coding skills. So fa
 
 > Problem: 501-1000
 
-|#No|Problem|Level|Tags|Alice|Zihao|
-|:-:|:-----:|:---:|:--:|:---:|:---:|
-|4|[Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/description/)|Hard|Array<br>Binary Search<br>Divide and Conquer|[Java](java\4-median-of-two-sorted-arrays.java)||
-|4|[Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/description/)|Hard|Array<br>Binary Search<br>Divide and Conquer|[Java](java\4-median-of-two-sorted-arrays.java)||
+|#No|Problem|Level|Tags|Alice|Zihao|Date|
+|:-:|:-----:|:---:|:--:|:---:|:---:|:--:|
+|539|[Minimum Time Difference](https://leetcode.com/problems/minimum-time-difference/description/)|Medium||[Python](python\539-minimum-time-difference.py)|[C++](c++\539-minimum-time-difference.cpp)|2024.09.16|
 |||||||
 
 ### Problem List 3
