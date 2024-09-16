@@ -17,6 +17,9 @@
 
 This is the repository for Zihao and Alice to improve their coding skills. So far, Alice is taking the lead but who knows what gonna happen in the future?
 
+A quick update:
+In future, Zihao has a smart idea for question 1674 :) Tao put his idea into python, like a coding machine, when Zihao went to office.
+
 ## Category
 + [Problem: 1-500](#problem-list-1)
 + [Problem: 501-1000](#problem-list-2)
