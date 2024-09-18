@@ -21,6 +21,8 @@ A quick update:
 In future, Zihao has a smart idea for question 1674 :) Tao put his idea into python, like a coding machine, when Zihao went to office.
 In fact, his idea is just a prototype and he has not tried it himself. Tao is exactly the pioneer rather than the coding machine. Actually, she is always sincerely encouraging Zihao to go further.
 
+Update on 09/17: Zihao has a [time limit exceeded](c++\1674-minimum-moves-to-make-array-complementary.cpp). Yeah, he lost.
+
 ## Category
 + [Problem: 1-500](#problem-list-1)
 + [Problem: 501-1000](#problem-list-2)
@@ -63,7 +65,7 @@ In fact, his idea is just a prototype and he has not tried it himself. Tao is ex
 
 |#No|Problem|Level|Tags|Alice|Zihao|
 |:-:|:-----:|:---:|:--:|:---:|:---:|
-|4|[Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/description/)|Hard|Array<br>Binary Search<br>Divide and Conquer|[Java](java\4-median-of-two-sorted-arrays.java)||
+|1674|[Minimum Moves to Make Array Complementary](https://leetcode.com/problems/minimum-moves-to-make-array-complementary/description/)|Medium|Array<br>Hash Table<br>Prefix Sum|[Python](python\1674-minimum-moves-to-make-array-complementary.py)|[TimeOut](c++\1674-minimum-moves-to-make-array-complementary.cpp)|2024.09.16|
 |||||||
 
 ### Problem List 5
