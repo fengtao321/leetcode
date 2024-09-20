@@ -1,15 +1,29 @@
 import os
 import sys
+import json
+import copy
 
 DEFAULT_PROBLEM_NAME = "Question"
 LINK_PREFIX = "https://leetcode.com/problems/"
 LINK_SUFFIX = "/description"
 DEFAULT_LINK = "https://leetcode.com/problemset/"
-LANGUAGE_PATHS = {"Java": "./java", "Python": "./Python", "C++": "/C++"}
+LANGUAGE_PATH_KEYNAME = "Path"
+LANGUAGE_SUFFIX_KEYNAME = "Suffix"
+LANGUAGE_PATHS = {
+    "Java": {
+        LANGUAGE_PATH_KEYNAME: "./java",
+        LANGUAGE_SUFFIX_KEYNAME: ".java"
+    },
+    "Python": {
+        LANGUAGE_PATH_KEYNAME: "./python",
+        LANGUAGE_SUFFIX_KEYNAME: ".py"
+    },
+    "C++": {
+        LANGUAGE_PATH_KEYNAME: "./c++",
+        LANGUAGE_SUFFIX_KEYNAME: ".cpp"
+    }
+}
 LANGUAGE_LIST = ["Java", "Python", "C++"]
-CPP_SUFFIX = ".cpp"
-PYTHON_SUFFIX = ".py"
-JAVA_SUFFIX = ".java"
 
 DEFAULT_SOLUTION_PATH = ""
 DEFAULT_EMPTY_STRING = "-"
@@ -39,7 +53,7 @@ class Problem:
         self.link = link
         self.level = level
         self.tags = tags
-        self.solutions = solutions
+        self.solutions = copy.deepcopy(solutions)
 
     # Parse the filename with suffix
     def parse_file(self, filename, prefix, suffix):
@@ -75,7 +89,8 @@ class Problem:
             markdown_lists.append(DEFAULT_EMPTY_STRING)
 
         for language in LANGUAGE_LIST:
-            markdown_lists.append(self.solutions[language])
+            if(language in self.solutions):
+                markdown_lists.append(self.solutions[language])
 
         markdown_str = MARKDOWN_JOINSYM.join(markdown_lists)
         json_obj = {
@@ -84,14 +99,12 @@ class Problem:
             "Link": self.link,
             "Level": self.level,
             "Tags": self.tags,
-            "Solutions": {
-                "Java": self.solutions['Java'],
-                "Python": self.solutions['Python'],
-                'C++': self.solutions['C++']
-            }
+            "Solutions": self.solutions
         }
 
         return markdown_str, json_obj
+
+pr_lib = Problem(-1)
 
 class ProblemSet:
     def __init__(self, json_filepath, markdown_filepath):
@@ -107,16 +120,48 @@ class ProblemSet:
     
     def read_files(self):
         # TODO: Go through all files to parse. Append any if missing in the current problem
+        for language in LANGUAGE_PATHS:
+            files = os.listdir(LANGUAGE_PATHS[language][LANGUAGE_PATH_KEYNAME])
+            suffix = LANGUAGE_PATHS[language][LANGUAGE_SUFFIX_KEYNAME]
+            for file in files:
+                if(file.endswith(suffix)):
+                    number, problem_link, problem_name = pr_lib.parse_file(file, None, suffix)
+                    if(number.isdigit()):
+                        if(int(number) not in self.problem_dict):
+                            problem = Problem(number, problem_name, problem_link)
+                            self.problem_dict[int(number)] = problem
+                        else:
+                            problem = self.problem_dict[int(number)]
+                        
+                        problem.set_solution(language, file)
+                        #print("/".join([language, file, number, problem_link, problem_name]))
+
         return 0
     
     def write_output(self):
         # TODO: Call build for each problem, and write to the files
+
+        json_raw = {}
+        ll = list(self.problem_dict.keys())
+        ll.sort()
+        for number in ll:
+            problem = self.problem_dict[number]
+            _, json_raw[number] = problem.build_output()
+            # print(number)
+        file_handle = open(self.json_filepath, "w")
+        json_obj = json.dumps(json_raw)
+        file_handle.write(json_obj)
+        file_handle.close()
         return 0
     
     def shutdown(self):
         # TODO: Terminate the object
         return 0
-    
+
+if __name__ == "__main__":
+    pr_set = ProblemSet(json_filepath = "here.json", markdown_filepath = None)
+    pr_set.read_files()
+    pr_set.write_output()
 
 # def read_language(language):
 #     language_path = folders[language]
