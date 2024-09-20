@@ -1,6 +1,5 @@
 target/
 env
 test.py
-here.json
 
 .DS_Store
