@@ -1,5 +1,5 @@
 class Solution:
-    def diffWaysToCompute(self, expression: str) -> List[int]:
+    def diffWaysToCompute(self, expression: str) -> List[int]:        
         signs = []
         nums = []
         
@@ -13,8 +13,13 @@ class Solution:
                 num_txt += c
         nums.append(int(num_txt))
         
+        dp = {}
+        
         def dfs(i, j):
             if i==j: return [nums[i]]
+            
+            key = i*100+j
+            if key in dp: return dp[key]
             
             res = []
             for k in range(i, j):
@@ -28,7 +33,8 @@ class Solution:
                         if sign == '-': res.append(x-y)
                         if sign == '*': res.append(x*y)
             
+            dp[key] = res
             return res
-                
+     
         return dfs(0, len(nums)-1)
-        
+    
