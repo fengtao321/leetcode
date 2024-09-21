@@ -21,9 +21,9 @@ A quick update:
 In future, Zihao has a smart idea for question 1674 :) Tao put his idea into python, like a coding machine, when Zihao went to office.
 In fact, his idea is just a prototype and he has not tried it himself. Tao is exactly the pioneer rather than the coding machine. Actually, she is always sincerely encouraging Zihao to go further.
 
-Update on 09/17: Today.... Q386, Zihao used 5mins... Tao used 5 hours...interesting :(
-
 Update on 09/17: Zihao has a [time limit exceeded](c++\1674-minimum-moves-to-make-array-complementary.cpp). Yeah, he lost.
+
+Update on 09/20: Today.... Q386, Zihao used 5mins... Tao used 5 hours...interesting :(
 
 Update on 09/21: Zihao wrote the [build_markdown.py] (build_markdown.py) at 6AM to build the amazing README. You are sharp!
 
