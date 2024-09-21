@@ -47,13 +47,14 @@ def first_capital(str):
 
 class Problem:
     def __init__(self, number, name = DEFAULT_PROBLEM_NAME, link = DEFAULT_LINK, 
-                       level = DEFAULT_EMPTY_STRING, tags = DEFAULT_EMPTY_STRING, solutions = {}):
+                       level = DEFAULT_EMPTY_STRING, tags = DEFAULT_EMPTY_STRING, solutions = {}, date = ""):
         self.number = number
         self.name = name
         self.link = link
         self.level = level
         self.tags = tags
         self.solutions = copy.deepcopy(solutions)
+        self.date = date
 
     # Parse the filename with suffix
     def parse_file(self, filename, prefix, suffix):
@@ -92,15 +93,21 @@ class Problem:
         else:
             markdown_lists.append(DEFAULT_EMPTY_STRING)
 
+        alice_lists = []
+        zihao_file  = ""
         for language in LANGUAGE_LIST:
             if(language in self.solutions):
                 solution_str = "[{}]({}/{})".format(
                     language, # Language name 
                     LANGUAGE_PATHS[language][LANGUAGE_PATH_KEYNAME], # Language prefix
                     self.solutions[language])
-                markdown_lists.append(solution_str)
-            else:
-                markdown_lists.append("N/A")
+                if (language == "Java" or language == "Python"):
+                    alice_lists.append(solution_str)
+                else:
+                    zihao_file = solution_str
+        markdown_lists.append(DEFAULT_BREAKLINE.join(alice_lists))
+        markdown_lists.append(zihao_file)
+        markdown_lists.append(self.date)
 
         markdown_str = MARKDOWN_JOINSYM.join(markdown_lists) + "|\n"
         json_obj = {
@@ -109,7 +116,8 @@ class Problem:
             "Link": self.link,
             "Level": self.level,
             "Tags": self.tags,
-            "Solutions": self.solutions
+            "Solutions": self.solutions,
+            "Date": self.date
         }
 
         return markdown_str, json_obj
@@ -153,7 +161,7 @@ class ProblemSet:
 
         json_raw = {}
         markdown_file_handle = open(self.markdown_filepath, "w")
-        header_str = "|#No|Problem|Level|Tags|Java|Python|C++|Date|\n|:-:|:-----:|:---:|:--:|:--:|:----:|:-:|:--:|\n"
+        header_str = "|#No|Problem|Level|Tags|Tao|Hao|Date|\n|:-:|:-----:|:---:|:--:|:-:|:-:|:--:|\n"
         markdown_file_handle.write(header_str)
         ll = list(self.problem_dict.keys())
         ll.sort()
