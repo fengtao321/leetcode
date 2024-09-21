@@ -25,6 +25,8 @@ Today.... Q386, Zihao used 5mins... Tao used 5 hours...interesting :(
 
 Update on 09/17: Zihao has a [time limit exceeded](c++\1674-minimum-moves-to-make-array-complementary.cpp). Yeah, he lost.
 
+Update on 09/21: Zihao wrote the [build_markdown.py] (build_markdown.py) at 6AM to build the amazing README. You are sharp!
+
 ## Category
 + [Problem: 1-500](#problem-list-1)
 + [Problem: 501-1000](#problem-list-2)
