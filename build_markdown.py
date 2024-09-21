@@ -60,8 +60,7 @@ class Problem:
         local_name = filename[:-len(suffix)] # Remove the language suffix
         strings = local_name.split(FILE_JOINSYM)
         number = strings[0]
-        problem_link = local_name
-
+        problem_link = LINK_PREFIX + local_name + LINK_SUFFIX
         problem_name = ""
         for i in range(1, len(strings)):
             problem_name = problem_name + first_capital(strings[i]) + " "
@@ -69,6 +68,9 @@ class Problem:
         if(len(problem_name) > 0):  # Remove last space
             problem_name = problem_name[:-1]
             self.name = problem_name
+        else:
+            problem_link = DEFAULT_LINK
+            problem_name = "Default"
         
         if(len(number) > 0):
             self.number = number
@@ -82,7 +84,9 @@ class Problem:
 
     # Build the markdown line and the json object
     def build_output(self):
-        markdown_lists = [self.number, self.name, self.level]
+        markdown_lists = ["", self.number, 
+                          "[{}]({})".format(self.name, self.link), 
+                          self.level]
         if (self.tags != DEFAULT_EMPTY_STRING):
             markdown_lists.append(DEFAULT_BREAKLINE.join(self.tags))
         else:
@@ -90,9 +94,15 @@ class Problem:
 
         for language in LANGUAGE_LIST:
             if(language in self.solutions):
-                markdown_lists.append(self.solutions[language])
+                solution_str = "[{}]({}/{})".format(
+                    language, # Language name 
+                    LANGUAGE_PATHS[language][LANGUAGE_PATH_KEYNAME], # Language prefix
+                    self.solutions[language])
+                markdown_lists.append(solution_str)
+            else:
+                markdown_lists.append("N/A")
 
-        markdown_str = MARKDOWN_JOINSYM.join(markdown_lists)
+        markdown_str = MARKDOWN_JOINSYM.join(markdown_lists) + "|\n"
         json_obj = {
             "No": self.number,
             "Name": self.name,
@@ -142,16 +152,21 @@ class ProblemSet:
         # TODO: Call build for each problem, and write to the files
 
         json_raw = {}
+        markdown_file_handle = open(self.markdown_filepath, "w")
+        header_str = "|#No|Problem|Level|Tags|Java|Python|C++|Date|\n|:-:|:-----:|:---:|:--:|:--:|:----:|:-:|:--:|\n"
+        markdown_file_handle.write(header_str)
         ll = list(self.problem_dict.keys())
         ll.sort()
         for number in ll:
             problem = self.problem_dict[number]
-            _, json_raw[number] = problem.build_output()
+            md_line, json_raw[number] = problem.build_output()
+            markdown_file_handle.write(md_line)
             # print(number)
-        file_handle = open(self.json_filepath, "w")
+        json_file_handle = open(self.json_filepath, "w")
         json_obj = json.dumps(json_raw)
-        file_handle.write(json_obj)
-        file_handle.close()
+        json_file_handle.write(json_obj)
+        json_file_handle.close()
+        markdown_file_handle.close()
         return 0
     
     def shutdown(self):
@@ -159,7 +174,7 @@ class ProblemSet:
         return 0
 
 if __name__ == "__main__":
-    pr_set = ProblemSet(json_filepath = "here.json", markdown_filepath = None)
+    pr_set = ProblemSet(json_filepath = "here.json", markdown_filepath = "here.md")
     pr_set.read_files()
     pr_set.write_output()
 
