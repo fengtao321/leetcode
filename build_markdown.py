@@ -61,7 +61,7 @@ class Problem:
         local_name = filename[:-len(suffix)] # Remove the language suffix
         strings = local_name.split(FILE_JOINSYM)
         number = strings[0]
-        problem_link = LINK_PREFIX + local_name + LINK_SUFFIX
+        problem_link = LINK_PREFIX + local_name[len(number)+1:] + LINK_SUFFIX
         problem_name = ""
         for i in range(1, len(strings)):
             problem_name = problem_name + first_capital(strings[i]) + " "
