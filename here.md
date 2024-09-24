@@ -1,3 +1,7 @@
+### Problem List 1
+
+> Problem: 1-500
+
 |#No|Problem|Level|Tags|Tao|Hao|Date|
 |:-:|:-----:|:---:|:--:|:-:|:-:|:--:|
 |1|[Two Sum](https://leetcode.com/problems/two-sum/description)|-|-|[Python](./python/1-two-sum.py)|||
@@ -15,9 +19,11 @@
 |31|[Next Permutation](https://leetcode.com/problems/next-permutation/description)|-|-|[Java](./java/31-next-permutation.java)|||
 |33|[Search In Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/description)|-|-|[Python](./python/33-search-in-rotated-sorted-array.py)|||
 |34|[Find First And Last Position Of Element In Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/description)|-|-|[Python](./python/34-find-first-and-last-position-of-element-in-sorted-array.py)|||
+|37|[Sudoku Solver](https://leetcode.com/problems/sudoku-solver/description)|-|-|[Python](./python/37-sudoku-solver.py)|||
 |41|[First Missing Positive](https://leetcode.com/problems/first-missing-positive/description)|-|-|[Java](./java/41-first-missing-positive.java)|||
 |42|[First Missing Positive](https://leetcode.com/problems/first-missing-positive/description)|-|-|[Python](./python/42-first-missing-positive.py)|||
 |46|[Permutations](https://leetcode.com/problems/permutations/description)|-|-|[Python](./python/46-permutations.py)|||
+|50|[Powx N](https://leetcode.com/problems/powx-n/description)|-|-||[C++](./c++/50-powx-n.cpp)||
 |52|[N Queens Ii Bit Manipulate](https://leetcode.com/problems/n-queens-ii-bit-manipulate/description)|-|-|[Java](./java/52-n-queens-ii-bit-manipulate.java)<br>[Python](./python/52-n-queens-ii.py)|||
 |56|[Merge Intervals Treemap](https://leetcode.com/problems/merge-intervals-treemap/description)|-|-|[Java](./java/56-merge-intervals.java)<br>[Python](./python/56-merge-intervals.py)|||
 |58|[Length Of Last Word](https://leetcode.com/problems/length-of-last-word/description)|-|-|[Python](./python/58-length-of-last-word.py)|||
@@ -94,6 +100,13 @@
 |448|[Find All Numbers Disappeared In An Array](https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/description)|-|-|[Java](./java/448-find-all-numbers-disappeared-in-an-array.java)|||
 |456|[132 Pattern](https://leetcode.com/problems/132-pattern/description)|-|-|[Python](./python/456-132-pattern.py)|||
 |494|[Target Sum 2dp](https://leetcode.com/problems/target-sum-2dp/description)|-|-|[Java](./java/494-target-sum-prefix.java)|||
+
+### Problem List 2
+
+> Problem: 501-1000
+
+|#No|Problem|Level|Tags|Tao|Hao|Date|
+|:-:|:-----:|:---:|:--:|:-:|:-:|:--:|
 |506|[Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/description)|-|-|[Python](./python/506-subarray-sum-equals-k.py)|||
 |516|[Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/description)|-|-|[Python](./python/516-longest-palindromic-subsequence.py)|||
 |518|[Coin Change Ii](https://leetcode.com/problems/coin-change-ii/description)|-|-|[Java](./java/518-coin-change-ii.java)|||
@@ -150,6 +163,13 @@
 |980|[Unique Paths Iii Backtrack](https://leetcode.com/problems/unique-paths-iii-backtrack/description)|-|-|[Java](./java/980-unique-paths-iii-backtrack.java)|||
 |994|[Rotting Oranges](https://leetcode.com/problems/rotting-oranges/description)|-|-|[Java](./java/994-rotting-oranges.java)<br>[Python](./python/994-rotting-oranges.py)|||
 |1000|[Minimum Cost To Merge Stones](https://leetcode.com/problems/minimum-cost-to-merge-stones/description)|-|-|[Java](./java/1000-minimum-cost-to-merge-stones.java)<br>[Python](./python/1000-minimum-cost-to-merge-stones.py)|||
+
+### Problem List 3
+
+> Problem: 1001-1500
+
+|#No|Problem|Level|Tags|Tao|Hao|Date|
+|:-:|:-----:|:---:|:--:|:-:|:-:|:--:|
 |1028|[Recover A Tree From Preorder Traversal](https://leetcode.com/problems/recover-a-tree-from-preorder-traversal/description)|-|-|[Python](./python/1028-recover-a-tree-from-preorder-traversal.py)|||
 |1029|[Remove All Adjacent Duplicates In String Ii](https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string-ii/description)|-|-|[Python](./python/1029-remove-all-adjacent-duplicates-in-string-ii.py)|||
 |1076|[Number Of Submatrices That Sum To Target Hashmap Prefix](https://leetcode.com/problems/number-of-submatrices-that-sum-to-target-hashmap-prefix/description)|-|-|[Python](./python/1076-number-of-submatrices-that-sum-to-target-hashmap-prefix.py)|||
@@ -182,6 +202,13 @@
 |1493|[Maximum Score Of A Good Subarray Dan](https://leetcode.com/problems/maximum-score-of-a-good-subarray-dan/description)|-|-|[Java](./java/1493-maximum-score-of-a-good-subarray-wrong.java)|||
 |1498|[Number Of Subsequences That Satisfy The Given Sum Condition](https://leetcode.com/problems/number-of-subsequences-that-satisfy-the-given-sum-condition/description)|-|-|[Python](./python/1498-number-of-subsequences-that-satisfy-the-given-sum-condition.py)|||
 |1499|[Max Value Of Equation](https://leetcode.com/problems/max-value-of-equation/description)|-|-|[Python](./python/1499-max-value-of-equation.py)|||
+
+### Problem List 4
+
+> Problem: 1501-2000
+
+|#No|Problem|Level|Tags|Tao|Hao|Date|
+|:-:|:-----:|:---:|:--:|:-:|:-:|:--:|
 |1522|[Diameter Of N Ary Tree](https://leetcode.com/problems/diameter-of-n-ary-tree/description)|-|-|[Java](./java/1522-diameter-of-n-ary-tree.java)|||
 |1524|[Number Of Sub Arrays With Odd Sum](https://leetcode.com/problems/number-of-sub-arrays-with-odd-sum/description)|-|-|[Java](./java/1524-number-of-sub-arrays-with-odd-sum.java)|||
 |1525|[Number Of Good Ways To Split A String](https://leetcode.com/problems/number-of-good-ways-to-split-a-string/description)|-|-|[Python](./python/1525-number-of-good-ways-to-split-a-string.py)|||
@@ -214,6 +241,13 @@
 |1981|[Minimize The Difference Between Target And Chosen Elements Greedy](https://leetcode.com/problems/minimize-the-difference-between-target-and-chosen-elements-greedy/description)|-|-|[Java](./java/1981-minimize-the-difference-between-target-and-chosen-elements.java)|||
 |1993|[Operations On Tree](https://leetcode.com/problems/operations-on-tree/description)|-|-|[Python](./python/1993-operations-on-tree.py)|||
 |1996|[The Number Of Weak Characters In The Game](https://leetcode.com/problems/the-number-of-weak-characters-in-the-game/description)|-|-|[Java](./java/1996-the-number-of-weak-characters-in-the-game.java)|||
+
+### Problem List 5
+
+> Problem: 2001-2500
+
+|#No|Problem|Level|Tags|Tao|Hao|Date|
+|:-:|:-----:|:---:|:--:|:-:|:-:|:--:|
 |2001|[Number Of Pairs Of Interchangeable Rectangles](https://leetcode.com/problems/number-of-pairs-of-interchangeable-rectangles/description)|-|-|[Python](./python/2001-number-of-pairs-of-interchangeable-rectangles.py)|||
 |2002|[Maximum Product Of The Length Of Two Palindromic Subsequences](https://leetcode.com/problems/maximum-product-of-the-length-of-two-palindromic-subsequences/description)|-|-|[Python](./python/2002-maximum-product-of-the-length-of-two-palindromic-subsequences.py)|||
 |2017|[Grid Game](https://leetcode.com/problems/grid-game/description)|-|-|[Python](./python/2017-grid-game.py)|||
@@ -248,6 +282,13 @@
 |2449|[Minimum Number Of Operations To Make Arrays Similar](https://leetcode.com/problems/minimum-number-of-operations-to-make-arrays-similar/description)|-|-|[Python](./python/2449-minimum-number-of-operations-to-make-arrays-similar.py)|||
 |2461|[Maximum Sum Of Distinct Subarrays With Length K](https://leetcode.com/problems/maximum-sum-of-distinct-subarrays-with-length-k/description)|-|-|[Python](./python/2461-maximum-sum-of-distinct-subarrays-with-length-k.py)|||
 |2478|[Number Of Beautiful Partitions Dan](https://leetcode.com/problems/number-of-beautiful-partitions-dan/description)|-|-|[Java](./java/2478-number-of-beautiful-partitions.java)|||
+
+### Problem List 6
+
+> Problem: 2501+
+
+|#No|Problem|Level|Tags|Tao|Hao|Date|
+|:-:|:-----:|:---:|:--:|:-:|:-:|:--:|
 |2509|[Cycle Length Queries In A Tree](https://leetcode.com/problems/cycle-length-queries-in-a-tree/description)|-|-|[Java](./java/2509-cycle-length-queries-in-a-tree.java)|||
 |2516|[Take K Of Each Character From Left And Right](https://leetcode.com/problems/take-k-of-each-character-from-left-and-right/description)|-|-|[Python](./python/2516-take-k-of-each-character-from-left-and-right.py)|||
 |2538|[Difference Between Maximum And Minimum Price Sum](https://leetcode.com/problems/difference-between-maximum-and-minimum-price-sum/description)|-|-|[Python](./python/2538-difference-between-maximum-and-minimum-price-sum.py)|||

@@ -2,6 +2,7 @@ import os
 import sys
 import json
 import copy
+import argparse
 
 DEFAULT_PROBLEM_NAME = "Question"
 LINK_PREFIX = "https://leetcode.com/problems/"
@@ -136,6 +137,14 @@ class ProblemSet:
         # TODO: Iterate the dict and create Problem object
         return 0
     
+    def gen_markdown_header(self, index):
+        min_order = index * 500 - 499
+        title_str = "### Problem List {}\n\n> Problem: {}{}\n\n".format(
+            index, min_order,
+            "-{}".format(min_order+499) if index < 6 else "+")
+        table_header_str = "|#No|Problem|Level|Tags|Tao|Hao|Date|\n|:-:|:-----:|:---:|:--:|:-:|:-:|:--:|\n"
+        return title_str + table_header_str
+        
     def read_files(self):
         # TODO: Go through all files to parse. Append any if missing in the current problem
         for language in LANGUAGE_PATHS:
@@ -161,11 +170,16 @@ class ProblemSet:
 
         json_raw = {}
         markdown_file_handle = open(self.markdown_filepath, "w")
-        header_str = "|#No|Problem|Level|Tags|Tao|Hao|Date|\n|:-:|:-----:|:---:|:--:|:-:|:-:|:--:|\n"
+        index = 1
+        header_str = self.gen_markdown_header(1)
         markdown_file_handle.write(header_str)
         ll = list(self.problem_dict.keys())
         ll.sort()
         for number in ll:
+            if (number > index*500 and index < 6):
+                index = index + 1
+                header_str = self.gen_markdown_header(index)
+                markdown_file_handle.write("\n" + header_str)
             problem = self.problem_dict[number]
             md_line, json_raw[number] = problem.build_output()
             markdown_file_handle.write(md_line)
@@ -176,12 +190,21 @@ class ProblemSet:
         json_file_handle.close()
         markdown_file_handle.close()
         return 0
+
+    # Load a problem of a specific number
+    def load_question(self, number):
+        return 0
+
     
     def shutdown(self):
         # TODO: Terminate the object
         return 0
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--mode', type=str, help='Add new question (add) or load all (load)', default="add")
+    args = parser.parse_args()
+    mode = args.mode
     pr_set = ProblemSet(json_filepath = "here.json", markdown_filepath = "here.md")
     pr_set.read_files()
     pr_set.write_output()

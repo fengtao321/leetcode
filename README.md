@@ -25,7 +25,13 @@ Update on 09/17: Zihao has a [time limit exceeded](c++\1674-minimum-moves-to-mak
 
 Update on 09/20: Today.... Q386, Zihao used 5mins... Tao used 5 hours...interesting :(
 
-Update on 09/21: Zihao wrote the [build_markdown.py] (build_markdown.py) at 6AM to build the amazing README. You are sharp!
+Update on 09/21: Zihao wrote the [build_markdown.py](build_markdown.py) at 6AM to build the amazing README. You are sharp!
+
+Update on 09/22: Tao made an excellent job on [Sudoku Solver](https://leetcode.com/problems/sudoku-solver/description) with her [solution](./python/37-sudoku-solver.py). Zihao tried to solve in a human way, and however, he forgot to take advantage of computers. They ran fast while humans are good at logic cutting. Even though his greedy algorithm made some sense, it did not improve the preformance, ended up confused himself again >:<.
+
+Update on 09/23: Version 0.0.2 [Readme Builder]("build_markdown.py"). No need to split the numbers manually, it now can create seperate subtitles and tables in the here.md file.
+
+Update on 09/23: Zihao tries to add some of his existing solutions into this repo. However, that's just 1/10 of Tao's work @x@.
 
 ## Category
 + [Problem: 1-500](#problem-list-1)
@@ -56,9 +62,11 @@ Update on 09/21: Zihao wrote the [build_markdown.py] (build_markdown.py) at 6AM 
 |31|[Next Permutation](https://leetcode.com/problems/next-permutation/description)|-|-|[Java](./java/31-next-permutation.java)|||
 |33|[Search In Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/description)|-|-|[Python](./python/33-search-in-rotated-sorted-array.py)|||
 |34|[Find First And Last Position Of Element In Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/description)|-|-|[Python](./python/34-find-first-and-last-position-of-element-in-sorted-array.py)|||
+|37|[Sudoku Solver](https://leetcode.com/problems/sudoku-solver/description)|-|-|[Python](./python/37-sudoku-solver.py)|||
 |41|[First Missing Positive](https://leetcode.com/problems/first-missing-positive/description)|-|-|[Java](./java/41-first-missing-positive.java)|||
 |42|[First Missing Positive](https://leetcode.com/problems/first-missing-positive/description)|-|-|[Python](./python/42-first-missing-positive.py)|||
 |46|[Permutations](https://leetcode.com/problems/permutations/description)|-|-|[Python](./python/46-permutations.py)|||
+|50|[Powx N](https://leetcode.com/problems/powx-n/description)|-|-||[C++](./c++/50-powx-n.cpp)||
 |52|[N Queens Ii Bit Manipulate](https://leetcode.com/problems/n-queens-ii-bit-manipulate/description)|-|-|[Java](./java/52-n-queens-ii-bit-manipulate.java)<br>[Python](./python/52-n-queens-ii.py)|||
 |56|[Merge Intervals Treemap](https://leetcode.com/problems/merge-intervals-treemap/description)|-|-|[Java](./java/56-merge-intervals.java)<br>[Python](./python/56-merge-intervals.py)|||
 |58|[Length Of Last Word](https://leetcode.com/problems/length-of-last-word/description)|-|-|[Python](./python/58-length-of-last-word.py)|||
@@ -332,5 +340,6 @@ Update on 09/21: Zihao wrote the [build_markdown.py] (build_markdown.py) at 6AM 
 |2911|[Default](https://leetcode.com/problemset/)|-|-|[Python](./python/2911.py)|||
 |3000|[Default](https://leetcode.com/problemset/)|-|-|[Python](./python/3000.py)|||
 |3180|[Default](https://leetcode.com/problemset/)|-|-|[Python](./python/3180.py)|||
+
 
 
