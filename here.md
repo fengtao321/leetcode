@@ -7,40 +7,60 @@
 |1|[Two Sum](https://leetcode.com/problems/two-sum/description)|-|-|[Python](./python/1-two-sum.py)|||
 |3|[Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/description)|-|-|[Python](./python/3-longest-substring-without-repeating-characters.py)|||
 |4|[Median Of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/description)|-|-|[Java](./java/4-median-of-two-sorted-arrays.java)<br>[Python](./python/4-median-of-two-sorted-arrays.py)|||
-|5|[Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/description)|-|-|[Java](./java/5-longest-palindromic-substring.java)|||
+|5|[Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/description)|-|-|[Java](./java/5-longest-palindromic-substring.java)|[C++](./c++/5-longest-palindromic-substring.cpp)||
+|6|[Zigzag Conversion](https://leetcode.com/problems/zigzag-conversion/description)|-|-||[C++](./c++/6-zigzag-conversion.cpp)||
+|7|[Reverse Integer](https://leetcode.com/problems/reverse-integer/description)|-|-||[C++](./c++/7-reverse-integer.cpp)||
+|8|[String To Integer Atoi](https://leetcode.com/problems/string-to-integer-atoi/description)|-|-||[C++](./c++/8-string-to-integer-atoi.cpp)||
+|9|[Palindrome Number](https://leetcode.com/problems/palindrome-number/description)|-|-||[C++](./c++/9-palindrome-number.cpp)||
 |10|[Regular Expression Matching](https://leetcode.com/problems/regular-expression-matching/description)|-|-|[Python](./python/10-regular-expression-matching.py)|||
-|11|[Container With Most Water](https://leetcode.com/problems/container-with-most-water/description)|-|-|[Java](./java/11-container-with-most-water.java)|||
+|11|[Container With Most Water](https://leetcode.com/problems/container-with-most-water/description)|-|-|[Java](./java/11-container-with-most-water.java)|[C++](./c++/11-container-with-most-water.cpp)||
 |13|[Roman To Integer](https://leetcode.com/problems/roman-to-integer/description)|-|-|[Java](./java/13-roman-to-integer.java)|||
 |14|[Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/description)|-|-|[Python](./python/14-longest-common-prefix.py)|||
+|15|[3sum](https://leetcode.com/problems/3sum/description)|-|-||[C++](./c++/15-3sum.cpp)||
+|16|[3sum Closest](https://leetcode.com/problems/3sum-closest/description)|-|-||[C++](./c++/16-3sum-closest.cpp)||
 |18|[4sum](https://leetcode.com/problems/4sum/description)|-|-|[Python](./python/18-4sum.py)|||
+|22|[Generate Parentheses](https://leetcode.com/problems/generate-parentheses/description)|-|-||[C++](./c++/22-generate-parentheses.cpp)||
 |23|[Merge K Sorted List Dequeue](https://leetcode.com/problems/merge-k-sorted-list-dequeue/description)|-|-|[Java](./java/23-merge-k-sorted-list.java)|||
 |25|[Reverse Nodes In K Group](https://leetcode.com/problems/reverse-nodes-in-k-group/description)|-|-|[Java](./java/25-reverse-nodes-in-k-group.java)|||
+|26|[Remove Duplicates From Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/description)|-|-||[C++](./c++/26-remove-duplicates-from-sorted-array.cpp)||
+|27|[Remove Element](https://leetcode.com/problems/remove-element/description)|-|-||[C++](./c++/27-remove-element.cpp)||
 |28|[Find The Index Of The First Occurrence In A String Kmp](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string-kmp/description)|-|-|[Python](./python/28-find-the-index-of-the-first-occurrence-in-a-string.py)|||
-|31|[Next Permutation](https://leetcode.com/problems/next-permutation/description)|-|-|[Java](./java/31-next-permutation.java)|||
-|33|[Search In Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/description)|-|-|[Python](./python/33-search-in-rotated-sorted-array.py)|||
+|31|[Next Permutation](https://leetcode.com/problems/next-permutation/description)|-|-|[Java](./java/31-next-permutation.java)|[C++](./c++/31-next-permutation.cpp)||
+|32|[Longest Valid Parentheses](https://leetcode.com/problems/longest-valid-parentheses/description)|-|-||[C++](./c++/32-longest-valid-parentheses.cpp)||
+|33|[Search In Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/description)|-|-|[Python](./python/33-search-in-rotated-sorted-array.py)|[C++](./c++/33-search-in-rotated-sorted-array.cpp)||
 |34|[Find First And Last Position Of Element In Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/description)|-|-|[Python](./python/34-find-first-and-last-position-of-element-in-sorted-array.py)|||
 |37|[Sudoku Solver](https://leetcode.com/problems/sudoku-solver/description)|-|-|[Python](./python/37-sudoku-solver.py)|||
 |41|[First Missing Positive](https://leetcode.com/problems/first-missing-positive/description)|-|-|[Java](./java/41-first-missing-positive.java)|||
-|42|[First Missing Positive](https://leetcode.com/problems/first-missing-positive/description)|-|-|[Python](./python/42-first-missing-positive.py)|||
+|42|[First Missing Positive](https://leetcode.com/problems/first-missing-positive/description)|-|-|[Python](./python/42-first-missing-positive.py)|[C++](./c++/42-trapping-rain-water.cpp)||
+|45|[Jump Game Ii](https://leetcode.com/problems/jump-game-ii/description)|-|-||[C++](./c++/45-jump-game-ii.cpp)||
 |46|[Permutations](https://leetcode.com/problems/permutations/description)|-|-|[Python](./python/46-permutations.py)|||
+|48|[Rotate Image](https://leetcode.com/problems/rotate-image/description)|-|-||[C++](./c++/48-rotate-image.cpp)||
+|49|[Group Anagrams](https://leetcode.com/problems/group-anagrams/description)|-|-||[C++](./c++/49-group-anagrams.cpp)||
 |50|[Powx N](https://leetcode.com/problems/powx-n/description)|-|-||[C++](./c++/50-powx-n.cpp)||
 |52|[N Queens Ii Bit Manipulate](https://leetcode.com/problems/n-queens-ii-bit-manipulate/description)|-|-|[Java](./java/52-n-queens-ii-bit-manipulate.java)<br>[Python](./python/52-n-queens-ii.py)|||
+|53|[Maximum Subarray](https://leetcode.com/problems/maximum-subarray/description)|-|-||[C++](./c++/53-maximum-subarray.cpp)||
+|55|[Jump Game](https://leetcode.com/problems/jump-game/description)|-|-||[C++](./c++/55-jump-game.cpp)||
 |56|[Merge Intervals Treemap](https://leetcode.com/problems/merge-intervals-treemap/description)|-|-|[Java](./java/56-merge-intervals.java)<br>[Python](./python/56-merge-intervals.py)|||
 |58|[Length Of Last Word](https://leetcode.com/problems/length-of-last-word/description)|-|-|[Python](./python/58-length-of-last-word.py)|||
 |60|[Permutation Sequence](https://leetcode.com/problems/permutation-sequence/description)|-|-|[Java](./java/60-permutation-sequence.java)|||
-|62|[Unique Paths 2ddp](https://leetcode.com/problems/unique-paths-2ddp/description)|-|-|[Java](./java/62-unique-paths-2ddp.java)|||
-|63|[Unique Paths Ii](https://leetcode.com/problems/unique-paths-ii/description)|-|-|[Java](./java/63-unique-paths-ii.java)|||
-|70|[Climing Stairs](https://leetcode.com/problems/climing-stairs/description)|-|-|[Java](./java/70-climing-stairs.java)|||
+|62|[Unique Paths 2ddp](https://leetcode.com/problems/unique-paths-2ddp/description)|-|-|[Java](./java/62-unique-paths-2ddp.java)|[C++](./c++/62-unique-paths.cpp)||
+|63|[Unique Paths Ii](https://leetcode.com/problems/unique-paths-ii/description)|-|-|[Java](./java/63-unique-paths-ii.java)|[C++](./c++/63-unique-paths-ii.cpp)||
+|64|[Minimum Path Sum](https://leetcode.com/problems/minimum-path-sum/description)|-|-||[C++](./c++/64-minimum-path-sum.cpp)||
+|70|[Climing Stairs](https://leetcode.com/problems/climing-stairs/description)|-|-|[Java](./java/70-climing-stairs.java)|[C++](./c++/70-climbing-stairs.cpp)||
 |71|[Simplify Path](https://leetcode.com/problems/simplify-path/description)|-|-|[Python](./python/71-simplify-path.py)|||
-|72|[Edit Distance](https://leetcode.com/problems/edit-distance/description)|-|-|[Python](./python/72-edit-distance.py)|||
-|75|[Sort Colors](https://leetcode.com/problems/sort-colors/description)|-|-|[Python](./python/75-sort-colors.py)|||
+|72|[Edit Distance](https://leetcode.com/problems/edit-distance/description)|-|-|[Python](./python/72-edit-distance.py)|[C++](./c++/72-edit-distance.cpp)||
+|75|[Sort Colors](https://leetcode.com/problems/sort-colors/description)|-|-|[Python](./python/75-sort-colors.py)|[C++](./c++/75-sort-colors.cpp)||
 |76|[Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/description)|-|-|[Java](./java/76-minimum-window-substring.java)<br>[Python](./python/76-minimum-window-substring.py)|||
 |84|[Largest Rectangle In Histogram](https://leetcode.com/problems/largest-rectangle-in-histogram/description)|-|-|[Java](./java/84-largest-rectangle-in-histogram.java)|||
 |91|[Decode Ways Dp](https://leetcode.com/problems/decode-ways-dp/description)|-|-|[Java](./java/91-decode-ways-dp.java)|||
+|92|[Reverse Linked List Ii](https://leetcode.com/problems/reverse-linked-list-ii/description)|-|-||[C++](./c++/92-reverse-linked-list-ii.cpp)||
 |97|[Interleaving String](https://leetcode.com/problems/interleaving-string/description)|-|-|[Java](./java/97-interleaving-string.java)|||
 |115|[Distince Subsequences](https://leetcode.com/problems/distince-subsequences/description)|-|-|[Python](./python/115-distince-subsequences.py)|||
 |116|[Populating Next Right Pointers In Each Node](https://leetcode.com/problems/populating-next-right-pointers-in-each-node/description)|-|-|[Python](./python/116-populating-next-right-pointers-in-each-node.py)|||
-|118|[Pascals Triangle](https://leetcode.com/problems/pascals-triangle/description)|-|-|[Python](./python/118-pascals-triangle.py)|||
+|117|[Populating Next Right Pointers In Each Node Ii](https://leetcode.com/problems/populating-next-right-pointers-in-each-node-ii/description)|-|-||[C++](./c++/117-populating-next-right-pointers-in-each-node-ii.cpp)||
+|118|[Pascals Triangle](https://leetcode.com/problems/pascals-triangle/description)|-|-|[Python](./python/118-pascals-triangle.py)|[C++](./c++/118-pascals-triangle.cpp)||
+|119|[Pascals Triangle Ii](https://leetcode.com/problems/pascals-triangle-ii/description)|-|-||[C++](./c++/119-pascals-triangle-ii.cpp)||
+|120|[Triangle](https://leetcode.com/problems/triangle/description)|-|-||[C++](./c++/120-triangle.cpp)||
 |122|[Best Time To Buy And Sell Stock Ii](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/description)|-|-|[Python](./python/122-best-time-to-buy-and-sell-stock-ii.py)|||
 |123|[Best Time To Buy And Sell Stock Iii](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/description)|-|-|[Python](./python/123-best-time-to-buy-and-sell-stock-iii.py)|||
 |124|[Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/description)|-|-|[Java](./java/124-binary-tree-maximum-path-sum.java)|||
@@ -50,6 +70,7 @@
 |130|[Surrounded Regions 0space](https://leetcode.com/problems/surrounded-regions-0space/description)|-|-|[Java](./java/130-surrounded-regions-set.java)|||
 |133|[Clone Graph](https://leetcode.com/problems/clone-graph/description)|-|-|[Java](./java/133-clone-graph.java)|||
 |139|[Word Break Dp](https://leetcode.com/problems/word-break-dp/description)|-|-|[Java](./java/139-word-break.java)|||
+|148|[Sort List](https://leetcode.com/problems/sort-list/description)|-|-||[C++](./c++/148-sort-list.cpp)||
 |150|[Evaluate Reverse Polish Notation](https://leetcode.com/problems/evaluate-reverse-polish-notation/description)|-|-|[Java](./java/150-evaluate-reverse-polish-notation.java)|||
 |152|[Maximum Product Subarray Prefix](https://leetcode.com/problems/maximum-product-subarray-prefix/description)|-|-|[Java](./java/152-maximum-product-subarray-prefix.java)|||
 |155|[Min Stack](https://leetcode.com/problems/min-stack/description)|-|-|[Java](./java/155-min-stack.java)|||
@@ -58,6 +79,8 @@
 |188|[Best Time To Buy And Sell Stock Iv](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/description)|-|-|[Python](./python/188-best-time-to-buy-and-sell-stock-iv.py)|||
 |189|[Rotate Array](https://leetcode.com/problems/rotate-array/description)|-|-|[Python](./python/189-rotate-array.py)|||
 |200|[Number Of Islands Disjoint Set](https://leetcode.com/problems/number-of-islands-disjoint-set/description)|-|-|[Java](./java/200-number-of-islands-fast-solution.java)|||
+|203|[Remove Linked List Elements](https://leetcode.com/problems/remove-linked-list-elements/description)|-|-||[C++](./c++/203-remove-linked-list-elements.cpp)||
+|206|[Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/description)|-|-||[C++](./c++/206-reverse-linked-list.cpp)||
 |207|[Course Schedule Bfs](https://leetcode.com/problems/course-schedule-bfs/description)|-|-|[Java](./java/207-course-schedule-dfs.java)|||
 |209|[Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/description)|-|-|[Python](./python/209-minimum-size-subarray-sum.py)|||
 |210|[Course Schedule II Topological Sorting](https://leetcode.com/problems/course-schedule-II-topological-sorting/description)|-|-|[Java](./java/210-course-schedule-II.java)<br>[Python](./python/210-course-schedule-ii.py)|||
@@ -190,9 +213,11 @@
 |1299|[Replace Elements With Greatest Element On Right Side](https://leetcode.com/problems/replace-elements-with-greatest-element-on-right-side/description)|-|-|[Python](./python/1299-replace-elements-with-greatest-element-on-right-side.py)|||
 |1310|[Default](https://leetcode.com/problemset/)|-|-|[Python](./python/1310.py)|||
 |1312|[Minimum Insertion Steps To Make A String Palindrome Bitmask Tle](https://leetcode.com/problems/minimum-insertion-steps-to-make-a-string-palindrome-bitmask-tle/description)|-|-|[Python](./python/1312-minimum-insertion-steps-to-make-a-string-palindrome-dp.py)|||
+|1345|[Jump Game Iv](https://leetcode.com/problems/jump-game-iv/description)|-|-||[C++](./c++/1345-jump-game-iv.cpp)||
 |1371|[Find The Longest Substring Containing Vowels In Even Counts](https://leetcode.com/problems/find-the-longest-substring-containing-vowels-in-even-counts/description)|-|-|[Python](./python/1371-find-the-longest-substring-containing-vowels-in-even-counts.py)|[C++](./c++/1371-find-the-longest-substring-containing-vowels-in-even-counts.cpp)||
 |1402|[Reducing Dishes Greedy](https://leetcode.com/problems/reducing-dishes-greedy/description)|-|-|[Python](./python/1402-reducing-dishes-greedy.py)|||
 |1422|[Maximum Score After Splitting A String](https://leetcode.com/problems/maximum-score-after-splitting-a-string/description)|-|-|[Java](./java/1422-maximum-score-after-splitting-a-string.java)|||
+|1425|[Constrained Subsequence Sum](https://leetcode.com/problems/constrained-subsequence-sum/description)|-|-||[C++](./c++/1425-constrained-subsequence-sum.cpp)||
 |1438|[Longest Continuous Subarray With Absolute Diff Less Than Or Equal To Limit Sliding Window](https://leetcode.com/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit-sliding-window/description)|-|-|[Java](./java/1438-longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit.java)|||
 |1442|[Count Triplets That Can Form Two Arrays Of Equal Xor](https://leetcode.com/problems/count-triplets-that-can-form-two-arrays-of-equal-xor/description)|-|-|[Java](./java/1442-count-triplets-that-can-form-two-arrays-of-equal-xor.java)|||
 |1461|[Check If A String Contains All Binary Codes Of Size K](https://leetcode.com/problems/check-if-a-string-contains-all-binary-codes-of-size-k/description)|-|-|[Python](./python/1461-check-if-a-string-contains-all-binary-codes-of-size-k.py)|||
@@ -282,6 +307,7 @@
 |2449|[Minimum Number Of Operations To Make Arrays Similar](https://leetcode.com/problems/minimum-number-of-operations-to-make-arrays-similar/description)|-|-|[Python](./python/2449-minimum-number-of-operations-to-make-arrays-similar.py)|||
 |2461|[Maximum Sum Of Distinct Subarrays With Length K](https://leetcode.com/problems/maximum-sum-of-distinct-subarrays-with-length-k/description)|-|-|[Python](./python/2461-maximum-sum-of-distinct-subarrays-with-length-k.py)|||
 |2478|[Number Of Beautiful Partitions Dan](https://leetcode.com/problems/number-of-beautiful-partitions-dan/description)|-|-|[Java](./java/2478-number-of-beautiful-partitions.java)|||
+|2487|[Remove Nodes From Linked List](https://leetcode.com/problems/remove-nodes-from-linked-list/description)|-|-||[C++](./c++/2487-remove-nodes-from-linked-list.cpp)||
 
 ### Problem List 6
 
