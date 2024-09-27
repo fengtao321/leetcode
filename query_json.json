@@ -1,0 +1,40 @@
+{
+    "problemsetQuestionList": {
+        "total": 2,
+        "questions": [
+            {
+                "acRate": 48.16119911736655,
+                "difficulty": "Hard",
+                "frontendQuestionId": "60",
+                "title": "Permutation Sequence",
+                "titleSlug": "permutation-sequence",
+                "topicTags": [
+                    {
+                        "name": "Math"
+                    },
+                    {
+                        "name": "Recursion"
+                    }
+                ]
+            },
+            {
+                "acRate": 53.02126822971246,
+                "difficulty": "Medium",
+                "frontendQuestionId": "1010",
+                "title": "Pairs of Songs With Total Durations Divisible by 60",
+                "titleSlug": "pairs-of-songs-with-total-durations-divisible-by-60",
+                "topicTags": [
+                    {
+                        "name": "Array"
+                    },
+                    {
+                        "name": "Hash Table"
+                    },
+                    {
+                        "name": "Counting"
+                    }
+                ]
+            }
+        ]
+    }
+}
