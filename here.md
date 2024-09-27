@@ -61,8 +61,9 @@
 |118|[Pascals Triangle](https://leetcode.com/problems/pascals-triangle/description)|-|-|[Python](./python/118-pascals-triangle.py)|[C++](./c++/118-pascals-triangle.cpp)||
 |119|[Pascals Triangle Ii](https://leetcode.com/problems/pascals-triangle-ii/description)|-|-||[C++](./c++/119-pascals-triangle-ii.cpp)||
 |120|[Triangle](https://leetcode.com/problems/triangle/description)|-|-||[C++](./c++/120-triangle.cpp)||
-|122|[Best Time To Buy And Sell Stock Ii](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/description)|-|-|[Python](./python/122-best-time-to-buy-and-sell-stock-ii.py)|||
-|123|[Best Time To Buy And Sell Stock Iii](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/description)|-|-|[Python](./python/123-best-time-to-buy-and-sell-stock-iii.py)|||
+|121|[Best Time To Buy And Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description)|-|-||[C++](./c++/121-best-time-to-buy-and-sell-stock.cpp)||
+|122|[Best Time To Buy And Sell Stock Ii](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/description)|-|-|[Python](./python/122-best-time-to-buy-and-sell-stock-ii.py)|[C++](./c++/122-best-time-to-buy-and-sell-stock-ii.cpp)||
+|123|[Best Time To Buy And Sell Stock Iii](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/description)|-|-|[Python](./python/123-best-time-to-buy-and-sell-stock-iii.py)|[C++](./c++/123-best-time-to-buy-and-sell-stock-iii.cpp)||
 |124|[Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/description)|-|-|[Java](./java/124-binary-tree-maximum-path-sum.java)|||
 |126|[TLE](https://leetcode.com/problems/TLE/description)|-|-|[Python](./python/126.py)|||
 |127|[Word Ladder](https://leetcode.com/problems/word-ladder/description)|-|-|[Java](./java/127-word-ladder.java)|||
@@ -76,7 +77,7 @@
 |155|[Min Stack](https://leetcode.com/problems/min-stack/description)|-|-|[Java](./java/155-min-stack.java)|||
 |179|[Largest Number](https://leetcode.com/problems/largest-number/description)|-|-|[Python](./python/179-largest-number.py)|||
 |187|[Repeated Dna Sequences](https://leetcode.com/problems/repeated-dna-sequences/description)|-|-|[Python](./python/187-repeated-dna-sequences.py)|||
-|188|[Best Time To Buy And Sell Stock Iv](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/description)|-|-|[Python](./python/188-best-time-to-buy-and-sell-stock-iv.py)|||
+|188|[Best Time To Buy And Sell Stock Iv](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/description)|-|-|[Python](./python/188-best-time-to-buy-and-sell-stock-iv.py)|[C++](./c++/188-best-time-to-buy-and-sell-stock-iv.cpp)||
 |189|[Rotate Array](https://leetcode.com/problems/rotate-array/description)|-|-|[Python](./python/189-rotate-array.py)|||
 |200|[Number Of Islands Disjoint Set](https://leetcode.com/problems/number-of-islands-disjoint-set/description)|-|-|[Java](./java/200-number-of-islands-fast-solution.java)|||
 |203|[Remove Linked List Elements](https://leetcode.com/problems/remove-linked-list-elements/description)|-|-||[C++](./c++/203-remove-linked-list-elements.cpp)||
@@ -86,12 +87,14 @@
 |210|[Course Schedule II Topological Sorting](https://leetcode.com/problems/course-schedule-II-topological-sorting/description)|-|-|[Java](./java/210-course-schedule-II.java)<br>[Python](./python/210-course-schedule-ii.py)|||
 |211|[Design Add And Search Words Data Structure](https://leetcode.com/problems/design-add-and-search-words-data-structure/description)|-|-|[Python](./python/211-design-add-and-search-words-data-structure.py)|||
 |212|[Word Search Ii](https://leetcode.com/problems/word-search-ii/description)|-|-|[Java](./java/212-word-search-ii.java)|||
-|217|[Contains Duplicate](https://leetcode.com/problems/contains-duplicate/description)|-|-|[Python](./python/217-contains-duplicate.py)|||
+|217|[Contains Duplicate](https://leetcode.com/problems/contains-duplicate/description)|-|-|[Python](./python/217-contains-duplicate.py)|[C++](./c++/217-contains-duplicate.cpp)||
 |218|[The Skyline Problem Line Sweep](https://leetcode.com/problems/the-skyline-problem-line-sweep/description)|-|-|[Java](./java/218-the-skyline-problem.java)|||
+|219|[Contains Duplicate Ii](https://leetcode.com/problems/contains-duplicate-ii/description)|-|-||[C++](./c++/219-contains-duplicate-ii.cpp)||
 |225|[Implement Stack Using Queues](https://leetcode.com/problems/implement-stack-using-queues/description)|-|-|[Python](./python/225-implement-stack-using-queues.py)|||
+|237|[Delete Node In A Linked List](https://leetcode.com/problems/delete-node-in-a-linked-list/description)|-|-||[C++](./c++/237-delete-node-in-a-linked-list.cpp)||
 |239|[Sliding Window Maximum Monoqueue](https://leetcode.com/problems/sliding-window-maximum-monoqueue/description)|-|-|[Java](./java/239-sliding-window-maximum-priorityqueue.java)|||
 |241|[Different Ways To Add Parentheses](https://leetcode.com/problems/different-ways-to-add-parentheses/description)|-|-|[Python](./python/241-different-ways-to-add-parentheses.py)|[C++](./c++/241.cpp)||
-|242|[Valid Anagram Alph List](https://leetcode.com/problems/valid-anagram-alph-list/description)|-|-|[Python](./python/242-valid-anagram-dictionary.py)|||
+|242|[Valid Anagram Alph List](https://leetcode.com/problems/valid-anagram-alph-list/description)|-|-|[Python](./python/242-valid-anagram-dictionary.py)|[C++](./c++/242-valid-anagram.cpp)||
 |256|[Walls And Gates Fast Solution](https://leetcode.com/problems/walls-and-gates-fast-solution/description)|-|-|[Java](./java/256-walls-and-gates.java)|||
 |261|[Graph Valid Tree](https://leetcode.com/problems/graph-valid-tree/description)|-|-|[Java](./java/261-graph-valid-tree.java)<br>[Python](./python/261-graph-valid-tree.py)|||
 |268|[Missing Number](https://leetcode.com/problems/missing-number/description)|-|-|[Java](./java/268-missing-number.java)|||
@@ -101,6 +104,7 @@
 |300|[Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/description)|-|-|[Java](./java/300-longest-increasing-subsequence.java)|||
 |301|[Remove Invalid Parentheses](https://leetcode.com/problems/remove-invalid-parentheses/description)|-|-|[Python](./python/301-remove-invalid-parentheses.py)|||
 |304|[Range Sum Query 2d Immutable](https://leetcode.com/problems/range-sum-query-2d-immutable/description)|-|-|[Python](./python/304-range-sum-query-2d-immutable.py)|||
+|306|[Additive Number](https://leetcode.com/problems/additive-number/description)|-|-||[C++](./c++/306-additive-number.cpp)||
 |307|[Range Sum Query Mutable](https://leetcode.com/problems/range-sum-query-mutable/description)|-|-|[Java](./java/307-range-sum-query-mutable.java)|||
 |309|[Best Time To Buy And Sell Stock With Cooldown 2ddp](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown-2ddp/description)|-|-|[Java](./java/309-best-time-to-buy-and-sell-stock-with-cooldown-stupid.java)|||
 |310|[Minimum Height Trees](https://leetcode.com/problems/minimum-height-trees/description)|-|-|[Java](./java/310-minimum-height-trees.java)|||
@@ -130,7 +134,7 @@
 
 |#No|Problem|Level|Tags|Tao|Hao|Date|
 |:-:|:-----:|:---:|:--:|:-:|:-:|:--:|
-|506|[Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/description)|-|-|[Python](./python/506-subarray-sum-equals-k.py)|||
+|506|[Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/description)|-|-|[Python](./python/506-subarray-sum-equals-k.py)|[C++](./c++/506-fibonacci-number.cpp)||
 |516|[Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/description)|-|-|[Python](./python/516-longest-palindromic-subsequence.py)|||
 |518|[Coin Change Ii](https://leetcode.com/problems/coin-change-ii/description)|-|-|[Java](./java/518-coin-change-ii.java)|||
 |523|[Continuous Subarray Sum](https://leetcode.com/problems/continuous-subarray-sum/description)|-|-|[Python](./python/523-continuous-subarray-sum.py)|||
@@ -161,6 +165,7 @@
 |735|[Asteroid Collision](https://leetcode.com/problems/asteroid-collision/description)|-|-|[Python](./python/735-asteroid-collision.py)|||
 |739|[Daily Temperatures](https://leetcode.com/problems/daily-temperatures/description)|-|-|[Java](./java/739-daily-temperatures.java)|||
 |743|[Network Delay](https://leetcode.com/problems/network-delay/description)|-|-|[Java](./java/743-network-delay.java)|||
+|746|[Min Cost Climbing Stairs](https://leetcode.com/problems/min-cost-climbing-stairs/description)|-|-||[C++](./c++/746-min-cost-climbing-stairs.cpp)||
 |764|[Min Cost Climing Stairs](https://leetcode.com/problems/min-cost-climing-stairs/description)|-|-|[Java](./java/764-min-cost-climing-stairs.java)|||
 |777|[Swap Adjacent In Lr String](https://leetcode.com/problems/swap-adjacent-in-lr-string/description)|-|-|[Java](./java/777-swap-adjacent-in-lr-string.java)|||
 |778|[Swim In Rising Water](https://leetcode.com/problems/swim-in-rising-water/description)|-|-|[Python](./python/778-swim-in-rising-water.py)|||
@@ -170,6 +175,7 @@
 |818|[Race Car](https://leetcode.com/problems/race-car/description)|-|-|[Java](./java/818-race-car.java)|||
 |834|[Sum Of Distances In Tree](https://leetcode.com/problems/sum-of-distances-in-tree/description)|-|-|[Java](./java/834-sum-of-distances-in-tree.java)<br>[Python](./python/834-sum-of-distances-in-tree.py)|||
 |838|[Push Dominoes](https://leetcode.com/problems/push-dominoes/description)|-|-|[Python](./python/838-push-dominoes.py)|||
+|842|[Split Array Into Fibonacci Sequence](https://leetcode.com/problems/split-array-into-fibonacci-sequence/description)|-|-||[C++](./c++/842-split-array-into-fibonacci-sequence.cpp)||
 |845|[Longest Mountain In Array Basic](https://leetcode.com/problems/longest-mountain-in-array-basic/description)|-|-|[Java](./java/845-longest-mountain-in-array-promotion.java)|||
 |853|[Default](https://leetcode.com/problemset/)|-|-|[Python](./python/853.py)|||
 |862|[Shortest Subarray With Sum At Least K](https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/description)|-|-|[Java](./java/862-shortest-subarray-with-sum-at-least-k.java)|||
@@ -183,7 +189,7 @@
 |947|[Most Stones Removed With Same Row Or Column](https://leetcode.com/problems/most-stones-removed-with-same-row-or-column/description)|-|-|[Java](./java/947-most-stones-removed-with-same-row-or-column.java)|||
 |959|[Regions Cut By Slashes Dan](https://leetcode.com/problems/regions-cut-by-slashes-dan/description)|-|-|[Java](./java/959-regions-cut-by-slashes.java)|||
 |974|[Subarray Sums Divisible By K](https://leetcode.com/problems/subarray-sums-divisible-by-k/description)|-|-|[Java](./java/974-subarray-sums-divisible-by-k.java)|||
-|980|[Unique Paths Iii Backtrack](https://leetcode.com/problems/unique-paths-iii-backtrack/description)|-|-|[Java](./java/980-unique-paths-iii-backtrack.java)|||
+|980|[Unique Paths Iii Backtrack](https://leetcode.com/problems/unique-paths-iii-backtrack/description)|-|-|[Java](./java/980-unique-paths-iii-backtrack.java)|[C++](./c++/980-unique-paths-iii.cpp)||
 |994|[Rotting Oranges](https://leetcode.com/problems/rotting-oranges/description)|-|-|[Java](./java/994-rotting-oranges.java)<br>[Python](./python/994-rotting-oranges.py)|||
 |1000|[Minimum Cost To Merge Stones](https://leetcode.com/problems/minimum-cost-to-merge-stones/description)|-|-|[Java](./java/1000-minimum-cost-to-merge-stones.java)<br>[Python](./python/1000-minimum-cost-to-merge-stones.py)|||
 
@@ -211,7 +217,8 @@
 |1284|[Minimum Number Of Flips To Convert Binary Matrix To Zero Matrix](https://leetcode.com/problems/minimum-number-of-flips-to-convert-binary-matrix-to-zero-matrix/description)|-|-|[Python](./python/1284-minimum-number-of-flips-to-convert-binary-matrix-to-zero-matrix.py)|||
 |1293|[Shortest Path In A Grid With Obstacles Elimination](https://leetcode.com/problems/shortest-path-in-a-grid-with-obstacles-elimination/description)|-|-|[Python](./python/1293-shortest-path-in-a-grid-with-obstacles-elimination.py)|||
 |1299|[Replace Elements With Greatest Element On Right Side](https://leetcode.com/problems/replace-elements-with-greatest-element-on-right-side/description)|-|-|[Python](./python/1299-replace-elements-with-greatest-element-on-right-side.py)|||
-|1310|[Default](https://leetcode.com/problemset/)|-|-|[Python](./python/1310.py)|||
+|1306|[Jump Game Iii](https://leetcode.com/problems/jump-game-iii/description)|-|-||[C++](./c++/1306-jump-game-iii.cpp)||
+|1310|[Default](https://leetcode.com/problemset/)|-|-|[Python](./python/1310.py)|[C++](./c++/1310-xor-queries-of-a-subarray.cpp)||
 |1312|[Minimum Insertion Steps To Make A String Palindrome Bitmask Tle](https://leetcode.com/problems/minimum-insertion-steps-to-make-a-string-palindrome-bitmask-tle/description)|-|-|[Python](./python/1312-minimum-insertion-steps-to-make-a-string-palindrome-dp.py)|||
 |1345|[Jump Game Iv](https://leetcode.com/problems/jump-game-iv/description)|-|-||[C++](./c++/1345-jump-game-iv.cpp)||
 |1371|[Find The Longest Substring Containing Vowels In Even Counts](https://leetcode.com/problems/find-the-longest-substring-containing-vowels-in-even-counts/description)|-|-|[Python](./python/1371-find-the-longest-substring-containing-vowels-in-even-counts.py)|[C++](./c++/1371-find-the-longest-substring-containing-vowels-in-even-counts.cpp)||
@@ -292,6 +299,7 @@
 |2251|[Number Of Flowers In Full Bloom Map](https://leetcode.com/problems/number-of-flowers-in-full-bloom-map/description)|-|-|[Java](./java/2251-number-of-flowers-in-full-bloom-prefix copy.java)|||
 |2271|[Maximum White Tiles Covered By A Carpet Slidng Window](https://leetcode.com/problems/maximum-white-tiles-covered-by-a-carpet-slidng-window/description)|-|-|[Java](./java/2271-maximum-white-tiles-covered-by-a-carpet-slidng-window.java)|||
 |2272|[Substring With Largest Variance](https://leetcode.com/problems/substring-with-largest-variance/description)|-|-|[Java](./java/2272-substring-with-largest-variance.java)<br>[Python](./python/2272-substring-with-largest-variance.py)|||
+|2273|[Find Resultant Array After Removing Anagrams](https://leetcode.com/problems/find-resultant-array-after-removing-anagrams/description)|-|-||[C++](./c++/2273-find-resultant-array-after-removing-anagrams.cpp)||
 |2276|[Count Integers In Intervals Review](https://leetcode.com/problems/count-integers-in-intervals-review/description)|-|-|[Java](./java/2276-count-integers-in-intervals.java)|||
 |2280|[Minimum Lines To Represent A Line Chart](https://leetcode.com/problems/minimum-lines-to-represent-a-line-chart/description)|-|-|[Java](./java/2280-minimum-lines-to-represent-a-line-chart.java)|||
 |2289|[Steps To Make Array Non Decreasing](https://leetcode.com/problems/steps-to-make-array-non-decreasing/description)|-|-|[Python](./python/2289-steps-to-make-array-non-decreasing.py)|||
