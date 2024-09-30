@@ -35,6 +35,8 @@ Update on 09/23: Zihao tries to add some of his existing solutions into this rep
 
 Update on 09/24: Zihao imports his C++ solutions for questions before 120.
 
+Update on 09/30: Zihao found a [website](https://programmercarl.com/) including a guidance working on algorithm and leetcode.
+
 ## Category
 + [Problem: 1-500](#problem-list-1)
 + [Problem: 501-1000](#problem-list-2)
