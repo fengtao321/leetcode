@@ -38,6 +38,9 @@ This is the log file for the development of the repo, which includes:
     - New Python Class to handle queries in [GraphQL](https://github.com/graphql-python/gql?tab=readme-ov-file)
     - Support basic query conditions for search in home page.
 
++ v0.0.4: Update in Markdown Builder
+    - Leetcode Query results will be inserted to the tables.
+
 
 
 
