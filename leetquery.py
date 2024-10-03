@@ -58,26 +58,45 @@ class LeetCodeQueryHandler:
             self.vars = vars
         return self.vars
     
+    # Update the filter keyword
+    def setKeyword(self, key):
+        self.vars["filters"]["searchKeywords"] = key
+
+    
     # Do the query, and return the result
     def doQuery(self):
         result = self.client.execute(self.query, variable_values=self.vars)
-        return result
+        questions = result["problemsetQuestionList"]["questions"]
+        # difficulty = None
+        # title = None
+        # titleSlug = None
+        # topicTags = None
+        for q in questions:
+            if (int(q["frontendQuestionId"]) == int(self.vars["filters"]["searchKeywords"])):
+                # difficulty = q["difficulty"]
+                # title = q["title"]
+                # titleSlug = q["titleSlug"]
+                # topicTags = q["topicTags"]
+                return q
+        # print(difficulty, title, titleSlug, topicTags)
+                
+        return None
     
 
 
 # Select your transport with a defined url endpoint
-transport = RequestsHTTPTransport(url=GQL_URL, verify=True)
+# transport = RequestsHTTPTransport(url=GQL_URL, verify=True)
 
 # Create a GraphQL client using the defined transport
-client = Client(transport=transport, fetch_schema_from_transport=False)
+# client = Client(transport=transport, fetch_schema_from_transport=False)
 
 # Provide a GraphQL query
-query = gql(GQL_QUERY)
+# query = gql(GQL_QUERY)
 
 if __name__ == "__main__":
     QHandler = LeetCodeQueryHandler()
     QHandler.resetClient()
-    QHandler.vars["filters"]["searchKeywords"] = 60
+    QHandler.setKeyword(60)
     result = QHandler.doQuery()
     json_file_handle = open("query_json.json", "w")
     json_obj = json.dumps(result)

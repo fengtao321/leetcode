@@ -4,6 +4,8 @@ import json
 import copy
 import argparse
 
+from leetquery import LeetCodeQueryHandler
+
 DEFAULT_PROBLEM_NAME = "Question"
 LINK_PREFIX = "https://leetcode.com/problems/"
 LINK_SUFFIX = "/description"
@@ -130,6 +132,9 @@ class ProblemSet:
         self.json_filepath = json_filepath
         self.markdown_filepath = markdown_filepath
         self.problem_dict = {}
+        self.QHandler = LeetCodeQueryHandler()
+        self.QHandler.resetClient()
+        self.QHandler.vars["filters"]["searchKeywords"] = 60    # Default searchKeywords
     
     def read_json(self):
         # TODO: Load the Json file into the dict object
@@ -152,10 +157,20 @@ class ProblemSet:
             suffix = LANGUAGE_PATHS[language][LANGUAGE_SUFFIX_KEYNAME]
             for file in files:
                 if(file.endswith(suffix)):
-                    number, problem_link, problem_name = pr_lib.parse_file(file, None, suffix)
+                    number, _, _ = pr_lib.parse_file(file, None, suffix)
+                    
                     if(number.isdigit()):
                         if(int(number) not in self.problem_dict):
-                            problem = Problem(number, problem_name, problem_link)
+                            # Update the var and do query
+                            self.QHandler.setKeyword(number)
+                            info = self.QHandler.doQuery()
+                            difficulty = info["difficulty"]
+                            problem_name = info["title"]
+                            problem_link = LINK_PREFIX + info["titleSlug"] + LINK_SUFFIX
+                            topicTags = []
+                            for tags in info["topicTags"]:
+                                topicTags.append(tags["name"])
+                            problem = Problem(number, problem_name, problem_link, difficulty, topicTags)
                             self.problem_dict[int(number)] = problem
                         else:
                             problem = self.problem_dict[int(number)]
