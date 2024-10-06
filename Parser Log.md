@@ -41,6 +41,8 @@ This is the log file for the development of the repo, which includes:
 + v0.0.4: Update in Markdown Builder
     - Leetcode Query results will be inserted to the tables.
 
++ v0.0.5: Split codes by users
+
 
 
 
