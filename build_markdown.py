@@ -6,6 +6,7 @@ import argparse
 
 from leetquery import LeetCodeQueryHandler
 
+USER_LIST = ["Tao", "Hao"]
 DEFAULT_PROBLEM_NAME = "Question"
 LINK_PREFIX = "https://leetcode.com/problems/"
 LINK_SUFFIX = "/description"
@@ -14,15 +15,15 @@ LANGUAGE_PATH_KEYNAME = "Path"
 LANGUAGE_SUFFIX_KEYNAME = "Suffix"
 LANGUAGE_PATHS = {
     "Java": {
-        LANGUAGE_PATH_KEYNAME: "./java",
+        LANGUAGE_PATH_KEYNAME: "/java",
         LANGUAGE_SUFFIX_KEYNAME: ".java"
     },
     "Python": {
-        LANGUAGE_PATH_KEYNAME: "./python",
+        LANGUAGE_PATH_KEYNAME: "/python",
         LANGUAGE_SUFFIX_KEYNAME: ".py"
     },
     "C++": {
-        LANGUAGE_PATH_KEYNAME: "./c++",
+        LANGUAGE_PATH_KEYNAME: "/c++",
         LANGUAGE_SUFFIX_KEYNAME: ".cpp"
     }
 }
@@ -34,12 +35,6 @@ DEFAULT_BREAKLINE = "<br>"
 
 MARKDOWN_JOINSYM = "|"
 FILE_JOINSYM = "-"
-
-index = []
-dict = {}
-folders = {"Java": "./java", "Python": "./Python"}#, "C++": "/C++"}
-
-# detail_dict = {"Name": "Two Sum", "Link": ".../two-sum/descriptions", "AliceFile": "./Python/1-two-sum.py"}
 
 # Make first letter to upper if applicable
 def first_capital(str):
@@ -83,8 +78,10 @@ class Problem:
 
         return number, problem_link, problem_name
     
-    def set_solution(self, language, file_path):
-        self.solutions[language] = file_path
+    def set_solution(self, user, language, file_path):
+        if user not in self.solutions.keys():
+            self.solutions[user] = {}
+        self.solutions[user][language] = file_path
 
     # Build the markdown line and the json object
     def build_output(self):
@@ -96,20 +93,20 @@ class Problem:
         else:
             markdown_lists.append(DEFAULT_EMPTY_STRING)
 
-        alice_lists = []
-        zihao_file  = ""
-        for language in LANGUAGE_LIST:
-            if(language in self.solutions):
-                solution_str = "[{}]({}/{})".format(
-                    language, # Language name 
-                    LANGUAGE_PATHS[language][LANGUAGE_PATH_KEYNAME], # Language prefix
-                    self.solutions[language])
-                if (language == "Java" or language == "Python"):
-                    alice_lists.append(solution_str)
-                else:
-                    zihao_file = solution_str
-        markdown_lists.append(DEFAULT_BREAKLINE.join(alice_lists))
-        markdown_lists.append(zihao_file)
+        solution_dict = {}
+        for user in USER_LIST:
+            if user in self.solutions.keys():   
+                solution_dict[user] = []
+                for language, solution in self.solutions[user].items():
+                    solution_str = "[{}]({}/{})".format(
+                        language, # Language name 
+                        LANGUAGE_PATHS[language][LANGUAGE_PATH_KEYNAME], # Language prefix
+                        solution)
+                    solution_dict[user].append(solution_str)               
+                markdown_lists.append(DEFAULT_BREAKLINE.join(solution_dict[user]))
+            else:
+                markdown_lists.append("")
+        
         markdown_lists.append(self.date)
 
         markdown_str = MARKDOWN_JOINSYM.join(markdown_lists) + "|\n"
@@ -150,10 +147,10 @@ class ProblemSet:
         table_header_str = "|#No|Problem|Level|Tags|Tao|Hao|Date|\n|:-:|:-----:|:---:|:--:|:-:|:-:|:--:|\n"
         return title_str + table_header_str
         
-    def read_files(self):
+    def read_files(self, user):
         # TODO: Go through all files to parse. Append any if missing in the current problem
         for language in LANGUAGE_PATHS:
-            files = os.listdir(LANGUAGE_PATHS[language][LANGUAGE_PATH_KEYNAME])
+            files = os.listdir("./" + user + LANGUAGE_PATHS[language][LANGUAGE_PATH_KEYNAME])
             suffix = LANGUAGE_PATHS[language][LANGUAGE_SUFFIX_KEYNAME]
             for file in files:
                 if(file.endswith(suffix)):
@@ -172,10 +169,11 @@ class ProblemSet:
                                 topicTags.append(tags["name"])
                             problem = Problem(number, problem_name, problem_link, difficulty, topicTags)
                             self.problem_dict[int(number)] = problem
+                            print("Added: " + number)
                         else:
                             problem = self.problem_dict[int(number)]
                         
-                        problem.set_solution(language, file)
+                        problem.set_solution(user, language, file)
                         #print("/".join([language, file, number, problem_link, problem_name]))
 
         return 0
@@ -221,7 +219,8 @@ if __name__ == "__main__":
     args = parser.parse_args()
     mode = args.mode
     pr_set = ProblemSet(json_filepath = "here.json", markdown_filepath = "here.md")
-    pr_set.read_files()
+    for user in USER_LIST:
+        pr_set.read_files(user)
     pr_set.write_output()
 
 # def read_language(language):
