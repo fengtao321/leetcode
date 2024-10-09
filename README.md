@@ -39,6 +39,8 @@ Update on 09/30: Zihao found a [website](https://programmercarl.com/) including 
 
 Update on 10/02: Leetcode Query is added. The table now can show level and tags.
 
+Update on 10/06: Xiaohao is the BEST, not only in mobile legend :)
+
 ## Category
 + [Problem: 1-500](#problem-list-1)
 + [Problem: 501-1000](#problem-list-2)
